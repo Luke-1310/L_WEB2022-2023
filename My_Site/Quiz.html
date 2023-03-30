@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Quizzone time;</title>
+    <link rel="stylesheet" href="res/CSS/external_quiz.css" type="text/css" />
+</head>
+
+<body style="background-color: #3c3c3c;">
+  <h1 class="titolo">I quizzoni del signor Privitera</h1>
+
+  <h3>Prima del quizzone dimmi qualcosa su di te...</h3>
+
+  <form method="post" action="welcome.php">
+    <p>Name: <input type="text" id="nome" name="name" /></p>
+    <p>E-mail: <input type="text" id="email" name="email" /></p>
+    <p>Gender:
+    <input type="radio" name="gender" value="female" />Female
+    <input type="radio" name="gender" value="male" />Male
+    <input type="radio" name="gender" value="other" />Other</p>
+    <p><input type="submit" name="submit" value="Invia i tuoi dati" /></p>
+  </form>
+
+  <h3>Rispondi ad un piccolo indovinello ora...</h3>
+  <h4>Seguendo questo schema...   "2+2 = 4, 3+12 = 3, 2+14 = 4, 11+15 = 4" quanto fa 8+8?</h4>
+
+  <form method="post" action="quizzone.php">
+    <p>Risultato: <input type="text" id="ris" name="ris" /></p>
+    <p><input type="submit" name="submit" value="Invia i tuoi dati" /></p>
+  </form>
+
+</body>
+</html>
