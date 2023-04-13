@@ -10,7 +10,7 @@ html{
     padding:0px;
     margin:5px;
     text-align: center;
-    color: black; 
+    color: black;
 }
 
 .home{
@@ -19,26 +19,39 @@ html{
     left:16px;
 }
 
-.main{
-    margin-top: 20px;
-    font-size: 20px; /* Aumento la dimensione del testo*/
-    padding: 0px 10px;
-}
-
 h2{
     font-family: 'Monaco', monospace;
     font-style: oblique;
+    margin-top: 20px;
+    font-size: 20px;
 }
 
-.libro{
-    padding:20px;
-    padding-top:10px;
-    padding-bottom:10px;
-    background-color: white;
-    display: inline-block;
-    border-style: solid;
-    text-align: center;
-    margin-left: 30%;
+.grid{
+    font-size: 20px; /* Aumento la dimensione del testo*/
+    display: grid;
+    grid-template-columns:25% 50% 25%;
+    grid-template-rows: 100px 300px;
+    padding-top: 10px;
+}
+
+.container-1{
+    text-align:left ;
+}
+
+
+
+.container-3 img{
+    margin-left: 100px;
+    width: 50%;
+}
+
+td{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+th{
+    padding-top: 10px;
 }
 
 .crediti{
