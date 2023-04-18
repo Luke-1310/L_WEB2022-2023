@@ -73,7 +73,7 @@ h2{
     display: inline-block;
     border-style: solid;
     margin-inline-start: 150px;        /*distanza tra la fine della prima casella e l'inizio dell'altra*/
-    list-style-type: circle;
+    list-style: none;
   }
 
   .lista ul strong{
