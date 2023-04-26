@@ -9,14 +9,14 @@
 </head>
 
 <body style="background-color: rgb(246, 218, 190);">
-    <h1 class="titolo">PAGINA DI REGISTRAZIONE</h1>
+    <h1 class="titolo">PAGINA DI LOGIN</h1>
 
 <div class="home">
     <a href = "homepage.html"><img src = "res/IMG_GIF/home.png" alt="home.png" width="10%"/></a>
 </div>
 
 <form action = "res/PHP/register.php" method="POST">
-    <h2>Benvenuto!</h2>
+    <h2>Esegui l'accesso</h2>
 
     <label for="username">Username</label>
     <input type="text" name="username" id="username" required>
@@ -30,7 +30,6 @@
     <span class ="bottone"><input type="submit" value="Invia">
     </span>
 
-    <p>Sei già registrato? Fai il <a href="login.php">login</p>
 </form>
 
 
