@@ -23,6 +23,15 @@ if(mysqli_num_rows($ris) > 0){
     exit(1);
 }
 
+$controllo_email = "SELECT* FROM utente e WHERE e.email = '$email'";
+$ris_e = mysqli_query($connessione, $controllo_email);
+
+if(mysqli_num_rows($ris_e) > 0){
+    $_SESSION['errore_e'] = 'true';
+    header('Location:../../register.php');
+    exit(1);
+}
+
 $sql = "INSERT INTO utente (username, email, password) VALUES ('$username', '$email', '$password')";
 $ins = mysqli_query($connessione, $sql);
 

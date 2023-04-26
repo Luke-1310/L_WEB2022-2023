@@ -23,6 +23,12 @@ h2{
     font-style: oblique;
 }
 
+h3{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    color:red;
+}
+
 .home{
     position: absolute;
     top:8px;

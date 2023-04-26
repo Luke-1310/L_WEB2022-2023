@@ -30,7 +30,7 @@
     <span class ="bottone"><input type="submit" value="Invia">
     </span>
 
-    <p>Non sei registrato? Fai la <a href="register.php">registrazione</p>
+    <p>Non sei registrato? Fai la <a href="register.php">registrazione</p></a>
 </form>
 
 
