@@ -36,4 +36,5 @@ Mentre le proprietà principali da noi utilizzate nei file CSS sono:
 
 - padding, margin, display: per posizionare gli elementi in maniera ordinata nelle varie pagine
 	
-	- nello specifico il file "consigliati.html" è stato strutturato tramite il "Grid Layout", presente nel selector ".grid".
+	- nello specifico il file "consigliati.html" è stato strutturato tramite il "Grid Layout", presente nel selector ".grid". 
+:cat2:
