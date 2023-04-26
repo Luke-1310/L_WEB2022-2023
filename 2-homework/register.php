@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -18,6 +17,19 @@
 
 <form action = "res/PHP/register.php" method="POST">
     <h2>Benvenuto!</h2>
+
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+
+    <span class ="bottone"><input type="submit" value="Invia">
+    </span>
+
 </form>
 
 

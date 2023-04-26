@@ -29,6 +29,22 @@ h2{
     left:16px;
 }
 
+form{
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+form label{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    margin-bottom: 10px;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
 .crediti{
     font-family: 'Monaco', monospace;
     font-style: oblique;
