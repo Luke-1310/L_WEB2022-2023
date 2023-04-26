@@ -23,23 +23,11 @@ h2{
     font-style: oblique;
 }
 
-.menu {
-    font-family: 'Monaco', monospace;
-    font-style: oblique;
-    position:fixed; 
-    height: 100%;
-    top:0;
-    left:0;
-    margin:0;
-    padding:0px; 
-    z-index:1;                                      /*La proprietà z-index specifica il layer di un elemento rispetto ad un altro (porta in primo piano).*/
-    width: 160px;
-    font-family: Arial, Verdana, sans-serif;         /*mostra le scritte nel font Arial, se esso non è presente nel browser dell'utente mostra Verdana e così via*/
-    list-style: none;
-    background-color: white;
-    border-style: solid;
-    text-align: center;
-  }
+.home{
+    position: absolute;
+    top:8px;
+    left:16px;
+}
 
 .crediti{
     font-family: 'Monaco', monospace;
