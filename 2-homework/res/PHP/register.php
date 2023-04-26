@@ -1,25 +1,31 @@
 <?php
 
+session_start();
+
 require_once('config.php');
+
+$connessione = new mysqli($host, $user, $password, $db);
 
 //real_escape_string() è una funzione usata per creare una stringa valida per SQL
 $username = $connessione->real_escape_string($_POST['username']);
 $email = $connessione->real_escape_string($_POST['email']);
 $password = $connessione->real_escape_string($_POST['password']);
 
-//fare controllo se esiste tramite query con mysql
+//fare controllo se esiste email tramite query con mysql
 //fare controllo delle password se uguali in fase di registrazione
 
+$controllo = "SELECT* FROM utente u WHERE u.username = '$username'"; 
+$ris = mysqli_query($connessione, $controllo);
+
+if(mysqli_num_rows($ris) > 0){
+    $_SESSION['errore'] = 'true';
+    header('Location:../../register.php'); //header sono l'analogo degli href
+    exit(1);
+}
 
 $sql = "INSERT INTO utente (username, email, password) VALUES ('$username', '$email', '$password')";
+$ins = mysqli_query($connessione, $sql);
 
-if($connessione->query($sql) === true){
-    echo "Registrazione effettuata con successo";
-}
-else{
-    echo "Errore durante registrazione utente $sql. " .$connessione->error;
-}
-
-
+header('Location:../../login.php');
 
 ?>

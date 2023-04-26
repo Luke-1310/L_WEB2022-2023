@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -18,6 +22,13 @@
 <form action = "res/PHP/register.php" method="POST">
     <h2>Benvenuto!</h2>
 
+    <?php
+        if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
+            echo "<h2>Username già esistente</h2>";
+            unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
+        }
+    ?>
+
     <label for="username">Username</label>
     <input type="text" name="username" id="username" required>
 
@@ -32,7 +43,6 @@
 
     <p>Sei già registrato? Fai il <a href="login.php">login</p>
 </form>
-
 
 <hr/>
 <div class="crediti">
