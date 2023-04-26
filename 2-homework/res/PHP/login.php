@@ -13,26 +13,21 @@ $password = $connessione->real_escape_string($_POST['password']);
 //fare controllo se esiste email tramite query con mysql
 //fare controllo delle password se uguali in fase di registrazione
 
-$controllo = "SELECT* FROM utente u WHERE u.username = '$username'"; 
+$controllo = "SELECT* FROM utente u WHERE u.username = '$username' AND u.password = '$password'"; 
+
 $ris = mysqli_query($connessione, $controllo);
 
-if(mysqli_num_rows($ris) > 0){
-    $_SESSION['errore'] = 'true';
-    header('Location:../../register.php'); //header sono l'analogo degli href
-    exit(1);
-}
+    if(mysqli_num_rows($ris) === 1){
+        $_SESSION['loggato'] = 'true';
+        $_SESSION['nome'] = "$username";
+        header('Location:../../homepage.php'); //header sono l'analogo degli href
+        exit(1);
+    }
+    else{
+        $_SESSION['errore'] = 'true';
+        header('Location:../../login.php'); //header sono l'analogo degli href
+        exit(1);
+    }
 
-$controllo_email = "SELECT* FROM utente e WHERE e.email = '$email'";
-$ris_e = mysqli_query($connessione, $controllo_email);
-
-if(mysqli_num_rows($ris_e) > 0){
-    $_SESSION['errore_e'] = 'true';
-    header('Location:../../register.php');
-    exit(1);
-}
-
-$_SESSION['nome'] = $nome_u;
-
-header('Location:../../login.php');
 
 ?>

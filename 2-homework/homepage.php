@@ -20,11 +20,13 @@
     <li><a href="consigliati.html">Le nostre letture</a></li>
     <li><a href="https://www.lafeltrinelli.it/">Noi di solito compriamo i libri qui</a></li>
     <li><a href="https://www.qlibri.it/">Per altre recensioni clicca qui</a></li>
-    <li><a href="register.php">Login&#x1F464;</a></li>
 
     <?php
-        if(isset($_SESSION['nome']) && empty('nome') == 'flase'){//isset verifica se errore è settata
-            echo "<li>$nome</li>";
+        if(isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true'){//isset verifica se loggato è settata
+            echo "<li>" . $_SESSION['nome'] ."</li>";
+        }
+        else{
+            echo "<li><a href=\"login.php\">Login&#x1F464;</a></li>";
         }
     ?>
 

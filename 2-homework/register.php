@@ -27,18 +27,16 @@
             echo "<h3>USERNAME GIÀ INSERITO!</h3>";
             unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
         }
-    ?>
 
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" required>
-    
-    <?php
         if(isset($_SESSION['errore_e']) && $_SESSION['errore_e'] == 'true'){//isset verifica se errore è settata
             echo "<h3>EMAIL GIÀ ESISTENTE!</h3>";
             unset($_SESSION['errore_e']);//la unsetto altrimenti rimarrebbe la scritta
         }
+
     ?>
 
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required>
 
     <label for="email">Email</label>
     <input type="email" name="email" id="email" required>
