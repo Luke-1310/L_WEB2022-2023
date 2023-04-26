@@ -19,14 +19,11 @@
     <a href = "homepage.html"><img src = "res/IMG_GIF/home.png" alt="home.png" width="10%"/></a>
 </div>
 
-<form action = "res/PHP/register.php" method="POST">
+<form action = "res/PHP/login.php" method="POST">
     <h2>Esegui l'accesso</h2>
 
     <label for="username">Username</label>
     <input type="text" name="username" id="username" required>
-
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
 
     <label for="password">Password</label>
     <input type="password" name="password" id="password" required>
