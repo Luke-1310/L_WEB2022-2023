@@ -16,7 +16,7 @@
     <h1 class="titolo">PAGINA DI LOGIN</h1>
 
 <div class="home">
-    <a href = "homepage.html"><img src = "res/IMG_GIF/home.png" alt="home.png" width="10%"/></a>
+    <a href = "homepage.php"><img src = "res/IMG_GIF/home.png" alt="home.png" width="10%"/></a>
 </div>
 
 <form action = "res/PHP/login.php" method="POST">
