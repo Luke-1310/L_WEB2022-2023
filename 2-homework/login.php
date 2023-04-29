@@ -21,6 +21,13 @@
 
 <form action = "res/PHP/login.php" method="POST">
     <h2>Esegui l'accesso</h2>
+    
+    <?php
+        if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
+            echo "<h3>USERNAME O PASSWORD ERRATE!</h3>";
+            unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
+        }
+    ?>
 
     <label for="username">Username</label>
     <input type="text" name="username" id="username" required>

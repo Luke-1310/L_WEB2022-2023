@@ -23,7 +23,8 @@
 
     <?php
         if(isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true'){//isset verifica se loggato è settata
-            echo "<li>" . $_SESSION['nome'] ."</li>";
+            echo $_SESSION['nome'] . "</br>" . "</br>";
+            echo "<a href=\"res\PHP\logout.php\">Logout</a>";
         }
         else{
             echo "<li><a href=\"login.php\">Login&#x1F464;</a></li>";
