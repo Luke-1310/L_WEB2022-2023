@@ -67,7 +67,7 @@
 </div>
 
 <div class="main">
-    <h2>Cos'è per noi leggere?&#x1F50D;</h2>
+    <h2>Cos'è per noi leggere?&#x1F4DA;</h2>
     <p>
         "Interrogo i libri e mi rispondono. Alcuni mi portano il riso sulle labbra o la consolazione nel cuore.
         Altri mi insegnano a conoscere me stesso" -Francesco Petrarca
