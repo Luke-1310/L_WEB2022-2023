@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once('config.php');
+require('config.php');
 
 $connessione = new mysqli($host, $user, $password, $db);
 
