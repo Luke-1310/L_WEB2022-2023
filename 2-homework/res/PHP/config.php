@@ -38,18 +38,6 @@ if ($conn->query($tab_utente) === FALSE) {
     echo "Errore nella creazione della tabella utente " . $conn->error;
 }
 
-//Crea la tabella recensione se non esistente
-$tab_recensione = "CREATE TABLE IF NOT EXISTS `recensione`(
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `utente_ID` int(11) NOT NULL,
-    `libro_ID` int(11) NOT NULL,
-    `testo` varchar(800) NOT NULL,
-    `voto` decimal(2,1) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (utente_ID) REFERENCES utente(id),
-    FOREIGN KEY (libro_ID) REFERENCES libro(id)
-)";
-
 //Crea la tabella autore se non esistente
 $tab_autore = "CREATE TABLE IF NOT EXISTS `autore` (
     `id` int(11) NOT NULL AUTO_INCREMENT,               
@@ -79,6 +67,22 @@ $tab_libro = "CREATE TABLE IF NOT EXISTS `libro`(
 
 if ($conn->query($tab_libro) === FALSE) {
     echo "Errore nella creazione della tabella libro " . $conn->error;
+}
+
+//Crea la tabella recensione se non esistente
+$tab_recensione = "CREATE TABLE IF NOT EXISTS `recensione`(
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `utente_ID` int(11) NOT NULL,
+    `libro_ID` int(11) NOT NULL,
+    `testo` varchar(800) NOT NULL,
+    `voto` decimal(2,1) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (utente_ID) REFERENCES utente(id),
+    FOREIGN KEY (libro_ID) REFERENCES libro(id)
+)";
+
+if ($conn->query($tab_recensione) === FALSE) {
+    echo "Errore nella creazione della tabella utente " . $conn->error;
 }
 
 
