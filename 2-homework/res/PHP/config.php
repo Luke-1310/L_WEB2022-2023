@@ -30,7 +30,7 @@ $tab_utente = "CREATE TABLE IF NOT EXISTS `utente` (
     `id` int(11) NOT NULL AUTO_INCREMENT,               
     `username` varchar(30) NOT NULL,
     `email` varchar(50) NOT NULL,
-    `password` varchar(30) NOT NULL,
+    `password` varchar(255) NOT NULL,
     PRIMARY KEY (id)
 )";
 
