@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require('config.php');
 
 $connessione = new mysqli($host, $user, $password, $db);
@@ -10,27 +8,47 @@ $connessione = new mysqli($host, $user, $password, $db);
 $username = $connessione->real_escape_string($_POST['username']);
 $password = $connessione->real_escape_string($_POST['password']);
 
-//fare controllo delle password se uguali in fase di registrazione
+if($_SERVER["REQUEST_METHOD"] === "POST"){
 
-$controllo = "SELECT* FROM utente u WHERE u.username = '$username' AND u.password = '$password'"; 
+    $controllo = "SELECT* FROM utente u WHERE u.username = '$username'";
 
-$ris = mysqli_query($connessione, $controllo);
-
-    if(mysqli_num_rows($ris) === 1){
-        $_SESSION['loggato'] = 'true';
-        $_SESSION['nome'] = "$username";
-
-        //Creazione del cookie preferenze utente senza valore   
-        $nome_cookie = 'preferenze_utente';   //il nome dell'username è univoco
-        $durata_cookie = time() + (86400*1); //il cookie dovrebbe durare quindi un giorno (numero di secondi in un giorno * nr giorni)
-        setcookie($nome_cookie, '', $durata_cookie, '/'); //settando '/' il cookie sarà accessibile nell'intero sito
-
-        header('Location:../../homepage.php'); //header sono l'analogo degli href
-        exit(1);
+    if($ris = $connessione->query($controllo)){
+        
+        if(mysqli_num_rows($ris) == 1){
+            $row = $ris->fetch_array(MYSQLI_ASSOC); //prendiamo la password hashata
+            
+            if(password_verify($password, $row['password'])){
+                session_start();
+                $_SESSION['loggato'] = 'true';
+                $_SESSION['nome'] = "$username";
+    
+                //Creazione del cookie preferenze utente senza valore   
+                $nome_cookie = 'preferenze_utente';   //il nome dell'username è univoco
+                $durata_cookie = time() + (86400*1); //il cookie dovrebbe durare quindi un giorno (numero di secondi in un giorno * nr giorni)
+                setcookie($nome_cookie, '', $durata_cookie, '/'); //settando '/' il cookie sarà accessibile nell'intero sito
+    
+                header('Location:../../homepage.php'); //header sono l'analogo degli href
+                exit(1);
+            }
+            else{
+                $_SESSION['errore'] = 'true';
+                header('Location:../../login.php'); //header sono l'analogo degli href
+                exit(1);
+            }
+        }
+        else{
+            $_SESSION['errore'] = 'true';
+            header('Location:../../login.php'); //header sono l'analogo degli href
+            exit(1);
+        }
     }
+
     else{
-        $_SESSION['errore'] = 'true';
+        $_SESSION['errore_v'] = 'true';
         header('Location:../../login.php'); //header sono l'analogo degli href
         exit(1);
     }
+    
+    $connessione->close(); //Chiudo la connessione
+}
 ?>
