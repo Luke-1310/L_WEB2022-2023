@@ -1,4 +1,15 @@
-<?xml version = "1.0" encoding="UTF-8"?>
+<?php
+    session_start();
+
+    if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_con_dark.css\" type=\"text/css\" />";
+    }
+
+    else{
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_con.css\" type=\"text/css\" />";
+    }
+    /*<?xml version = "1.0" encoding="UTF-8"?>*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -6,14 +17,13 @@
 
 <head>
     <title>Perché è importante leggere... </title>
-    <link rel="stylesheet" href="res/CSS/external_con.css" type="text/css" />
 </head>
 
-<body style="background-color: rgb(246, 218, 190);">
+<body>
     <h1 class="titolo">I NOSTRI CONSIGLI!&#x1F4A1;</h1>
 
     <div class="home">
-        <a href = "homepage.php"><img src = "res/IMG_GIF/home.png" alt="home.png" width="10%"/></a>
+        <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
     </div>
     
 <h2><br/>Novecento</h2>

@@ -2,7 +2,7 @@
     session_start();
 
     if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
-        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_dark.css\" type=\"text/css\" />";
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_hmp_dark.css\" type=\"text/css\" />";
     }
     else{
         echo "<link rel=\"stylesheet\" href=\"res/CSS/external_hmp.css\" type=\"text/css\" />";
@@ -23,8 +23,8 @@
     <h1 class="titolo">LA CASA DEL LIBRO</h1>
 
    <ul class="menu">
-    <li><a href="importante_leggere.html">Perché è importante leggere?</a></li>
-    <li><a href="consigliati.html">Le nostre letture</a></li>
+    <li><a href="importante_leggere.php">Perché è importante leggere?</a></li>
+    <li><a href="consigliati.php">Le nostre letture</a></li>
     <li><a href="https://www.lafeltrinelli.it/">Noi di solito compriamo i libri qui</a></li>
     <li><a href="https://www.qlibri.it/">Per altre recensioni clicca qui</a></li>
 
