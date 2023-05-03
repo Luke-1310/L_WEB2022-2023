@@ -24,7 +24,7 @@
     <h1 class="titolo">PAGINA DI REGISTRAZIONE</h1>
 
 <div class="home">
-    <a href = "homepage.php"><img src = "res/IMG_GIF/home.png" alt="home3.png" width="10%"/></a>
+    <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
 </div>
 
 <form action = "res/PHP/register.php" method="POST">
