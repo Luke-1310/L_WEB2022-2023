@@ -82,6 +82,11 @@ h2{
     
   }
 
+button{
+  margin-right: 10px;
+  width: 40px;
+}  
+
 .crediti{
     font-family: 'Monaco', monospace;
     font-style: oblique;
