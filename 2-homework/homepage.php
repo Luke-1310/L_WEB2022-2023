@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_dark.css\" type=\"text/css\" />";
+    }
+    else{
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_hmp.css\" type=\"text/css\" />";
+    }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -9,7 +16,7 @@
 
 <head>
     <title>La casa del libro: recensioni, letture... </title>
-    <link rel="stylesheet" href="res/CSS/external_hmp.css" type="text/css" />
+    
 </head>
 
 <body style="background-color: rgb(246, 218, 190);">
