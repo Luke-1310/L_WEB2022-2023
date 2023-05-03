@@ -3,7 +3,8 @@ html{
 }
 
 body{
-    background-color: rgb(239, 209, 179);
+    background-color: black;
+    color: white;
 }
 
 .titolo{
@@ -13,7 +14,6 @@ body{
     background-color: none;
     margin:5px;
     text-align: center;
-    color: black;
 }
 
 .main{
