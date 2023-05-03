@@ -19,7 +19,7 @@
     
 </head>
 
-<body style="background-color: rgb(246, 218, 190);">
+<body>
     <h1 class="titolo">LA CASA DEL LIBRO</h1>
 
    <ul class="menu">

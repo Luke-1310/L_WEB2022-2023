@@ -2,6 +2,11 @@ html{
     border-style: solid;
 }
 
+body{
+    background-color: black;
+    color: white;
+}
+
 .titolo{
     font-family: 'Monaco', monospace;
     font-style: oblique;
