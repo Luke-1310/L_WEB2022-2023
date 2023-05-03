@@ -10,6 +10,7 @@ $connessione = new mysqli($host, $user, $password, $db);
 $username = $connessione->real_escape_string($_POST['username']);
 $email = $connessione->real_escape_string($_POST['email']);
 $password = $connessione->real_escape_string($_POST['password']);
+$password2 = $connessione->real_escape_string($_POST['password2']);
 
 //fare controllo se esiste email tramite query con mysql
 //fare controllo delle password se uguali in fase di registrazione
@@ -28,6 +29,12 @@ $ris_e = mysqli_query($connessione, $controllo_email);
 
 if(mysqli_num_rows($ris_e) > 0){
     $_SESSION['errore_e'] = 'true';
+    header('Location:../../register.php');
+    exit(1);
+}
+
+if($password !== $password2){
+    $_SESSION['errore_p'] = 'true';
     header('Location:../../register.php');
     exit(1);
 }
