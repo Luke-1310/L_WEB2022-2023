@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $tema_scuro = '';
+    $_SESSION[$tema_scuro] = FALSE;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -22,10 +24,14 @@
     <li><a href="https://www.qlibri.it/">Per altre recensioni clicca qui</a></li>
 
     <?php   
-            //$_SESSION[$tema_scuro] = FALSE;
-            echo "<button>Cambia tema</button>";
-            echo "<form action = \"res/PHP/dark.php\"></form>";
+            
+        echo "<button onclick>Cambia tema</button>";
 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $_SESSION[$tema_scuro] = !$_SESSION[$tema_scuro];// nega la variabile se il form è stato inviato
+        }
+
+        echo "<form action = \"res/PHP/dark.php\"></form>";
 
         if(isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true'){//isset verifica se loggato è settata
             echo "<hr/>" . $_SESSION['nome'] . "<br/>";
