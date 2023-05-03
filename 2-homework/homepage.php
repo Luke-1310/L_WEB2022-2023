@@ -21,10 +21,15 @@
     <li><a href="https://www.lafeltrinelli.it/">Noi di solito compriamo i libri qui</a></li>
     <li><a href="https://www.qlibri.it/">Per altre recensioni clicca qui</a></li>
 
-    <?php
+    <?php   
+            //$_SESSION[$tema_scuro] = FALSE;
+            echo "<button>Cambia tema</button>";
+            echo "<form action = \"res/PHP/dark.php\"></form>";
+
+
         if(isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true'){//isset verifica se loggato è settata
-            echo "<hr/>" . $_SESSION['nome'] . "<br/>" . "<br/>";
-            echo "<a href=\"res\PHP\logout.php\">Logout</a>";
+            echo "<hr/>" . $_SESSION['nome'] . "<br/>";
+            echo "<hr/>" . "<a href=\"res\PHP\logout.php\">Logout</a>";
         }
         else{
             echo "<li><a href=\"login.php\">Login&#x1F464;</a></li>";
@@ -68,6 +73,7 @@
 </div>
 
 <div class="main">
+
     <h2>Cos'è per noi leggere?&#x1F4DA;</h2>
     <p>
         "Interrogo i libri e mi rispondono. Alcuni mi portano il riso sulle labbra o la consolazione nel cuore.
@@ -77,8 +83,6 @@
     <p>
         "Dimmi ciò che leggi e ti dirò chi sei' è vero; ma ti conoscerei meglio se mi dicessi quello che rileggi" -François Mauriac
     </p>
-
-
 </div>
 
 <hr/>
