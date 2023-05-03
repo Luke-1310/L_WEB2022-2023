@@ -35,8 +35,7 @@
     <label for="password">Password</label>
     <input type="password" name="password" id="password" required>
 
-    <span class ="bottone"><input type="submit" value="Invia">
-    </span>
+    <span class ="bottone"><input type="submit" value="Invia"></span>
 
     <p>Non sei registrato? Fai la <a href="register.php">registrazione</p></a>
 </form>
