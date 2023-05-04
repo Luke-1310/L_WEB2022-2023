@@ -1,8 +1,8 @@
 # L_WEB2022-2023
 In questa repository possiamo trovare una buona parte degli esercizi da me effettuati per il corso "Linguaggi per il Web"
 
-"1-homework" contiene il primo homework da consegnare HTML-CSS
+"1-homework" contiene il primo homework da consegnare XHTML-CSS
 
-"My_Site" contiene un sito fatto per fare qualche prova, non continene nulla in particolare da vedere
+"2-homework" contiene il secondo homework da consegnare XHTML-CSS-PHP-MYSQL
 
-"Tesina" cartella che conterrà poi il lavoro per la 
+"Tesina" cartella che conterrà poi il lavoro per la futura tesina
