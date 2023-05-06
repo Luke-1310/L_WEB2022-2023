@@ -25,9 +25,18 @@
     <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
 </div>
 
-<div class="rotating-figure">
-   <img src = "res/IMG_GIF/locked_book.png" alt="locked_book.png" width="80%"/></a>
-</div>
+<?php
+    if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
+        echo "<div class=\"rotating-figure\">";
+        echo "<img src = \"res/IMG_GIF/locked_book_dark.png\" alt=\"locked_book_dark.png\"/></img>";
+        echo "</div>";
+    }
+    else{
+        echo "<div class=\"rotating-figure\">";
+        echo "<img src = \"res/IMG_GIF/locked_book.png\" alt=\"locked_book.png\"/></img>";
+        echo "</div>";
+    }
+?>  
 
 <div class="container_reg">
 

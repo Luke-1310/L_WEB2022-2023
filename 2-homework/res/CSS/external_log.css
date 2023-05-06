@@ -61,7 +61,12 @@ h3{
     width: 80px;
     animation: rotate 4s infinite linear;
   }
-  
+
+.rotating-figure img{
+    width: 80%;
+}  
+
+
   @keyframes rotate {
     from {
       transform: rotate(0deg);
