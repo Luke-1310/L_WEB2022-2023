@@ -83,7 +83,7 @@ if ($conn->query($tab_recensione) === FALSE) {
 }
 
 //alla fine della creazione siverrà reindirizzati alla homepage
-header('Location: ../../homepage.php');
+header('Location: homepage.php');
 
 // Chiude la connessione al database
 $conn->close();
