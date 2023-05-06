@@ -1,9 +1,6 @@
 <?php
 
-$host = "127.0.0.1";
-$user = "root";
-$password = "";
-$db = "homework_lweb";
+require_once('res/PHP/connection.php');
 
 // Crea la connessione col server
 $conn = new mysqli($host, $user, $password);
@@ -21,7 +18,7 @@ if ($conn->query($sql) === FALSE) {
 }
 
 // Seleziona il database con cui vogliamo operare
-$conn->select_db($db);
+$conn = new mysqli($host, $user, $password, $db);
 
 //Crea la tabella utente se non esistente
 //E' necessario mettere al campo id 'AUTO_INCREMENT' altrimenti inserito il secondo utente darebbe errore
@@ -83,13 +80,6 @@ $tab_recensione = "CREATE TABLE IF NOT EXISTS `recensione`(
 
 if ($conn->query($tab_recensione) === FALSE) {
     echo "Errore nella creazione della tabella utente " . $conn->error;
-}
-
-$ins_utente = "INSERT INTO `utente`(`username`, `email`, `password`)
-    VALUES ('prova', 'prova1@gmail.com', 'prova')";
-
-if ($conn->query($ins_utente) === FALSE) {
-    echo "Errore negli inserimenti nella tabella utente" . $conn->error;
 }
 
 //alla fine della creazione siverrà reindirizzati alla homepage
