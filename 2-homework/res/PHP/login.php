@@ -2,7 +2,7 @@
 
 session_start(); //ho lasciato fuori questa funzione, invece di metterla quando il login va a buon fine per poter stampare un messaggio di errore
 
-require('config.php');
+require('connection.php');
 
 $connessione = new mysqli($host, $user, $password, $db);
 

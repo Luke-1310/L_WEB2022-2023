@@ -72,6 +72,7 @@ h2{
     background-color: white;
     display: inline-block;
     border-style: solid;
+    border-radius: 25px;               /*serve per inserire bordi curvi*/
     margin-inline-start: 150px;        /*distanza tra la fine della prima casella e l'inizio dell'altra*/
     list-style: none;
   }

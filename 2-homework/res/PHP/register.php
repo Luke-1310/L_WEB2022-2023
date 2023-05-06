@@ -2,7 +2,7 @@
 
 session_start();
 
-require('config.php');
+require('connection.php');
 
 $connessione = new mysqli($host, $user, $password, $db);
 
@@ -13,9 +13,6 @@ $password = $connessione->real_escape_string($_POST['password']);
 $password2 = $connessione->real_escape_string($_POST['password2']);
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-//fare controllo se esiste email tramite query con mysql
-//fare controllo delle password se uguali in fase di registrazione
 
 $controllo = "SELECT* FROM utente u WHERE u.username = '$username'"; 
 $ris = mysqli_query($connessione, $controllo);
@@ -40,10 +37,11 @@ if($password !== $password2){
     header('Location:../../register.php');
     exit(1);
 }
-
+//le password sono hashate, quindi una insert del genere non funzionerebbe, poiché la password è già in chiaro e quindi si creerebbe una incongruenza 
+/*
 $sql = "INSERT INTO utente (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
 $ins = mysqli_query($connessione, $sql);
-
+*/
 header('Location:../../login.php');
 
 ?>

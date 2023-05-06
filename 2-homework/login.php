@@ -25,8 +25,8 @@
     <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
 </div>
 
-<form action = "res/PHP/login.php" method="POST">
-    <h2>Esegui l'accesso</h2>
+<div class="container">
+    <form action = "res/PHP/login.php" method="POST">
     
     <?php
         if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
@@ -50,7 +50,7 @@
 
     <p>Non sei registrato? Fai la <a href="register.php">registrazione</p></a>
 </form>
-
+</div>
 
 <hr/>
 <div class="crediti">

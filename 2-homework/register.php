@@ -7,8 +7,6 @@
     else{
         echo "<link rel=\"stylesheet\" href=\"res/CSS/external_log.css\" type=\"text/css\" />";
     }
-
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -27,44 +25,46 @@
     <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
 </div>
 
-<form action = "res/PHP/register.php" method="POST">
-    <h2>Benvenuto!</h2>
+<div class="container">
 
-    <?php
-        if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
-            echo "<h3>USERNAME GIÀ INSERITO!</h3>";
-            unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
-        }
+    <form action = "res/PHP/register.php" method="POST">
 
-        if(isset($_SESSION['errore_e']) && $_SESSION['errore_e'] == 'true'){//isset verifica se errore è settata
-            echo "<h3>EMAIL GIÀ ESISTENTE!</h3>";
-            unset($_SESSION['errore_e']);//la unsetto altrimenti rimarrebbe la scritta
-        }
+        <?php
+            if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
+                echo "<h3>USERNAME GIÀ INSERITO!</h3>";
+                unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
+            }
+
+            if(isset($_SESSION['errore_e']) && $_SESSION['errore_e'] == 'true'){//isset verifica se errore è settata
+                echo "<h3>EMAIL GIÀ ESISTENTE!</h3>";
+                unset($_SESSION['errore_e']);//la unsetto altrimenti rimarrebbe la scritta
+            }
         
-        if(isset($_SESSION['errore_p']) && $_SESSION['errore_p'] == 'true'){
-            echo "<h3>LE PASSWORD NON SONO UGUALI!</h3>";
-            unset($_SESSION['errore_p']);
-        }
-    ?>
+            if(isset($_SESSION['errore_p']) && $_SESSION['errore_p'] == 'true'){
+                echo "<h3>LE PASSWORD NON SONO UGUALI!</h3>";
+                unset($_SESSION['errore_p']);
+            }
+        ?>
 
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" required>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
 
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
     
-    <label for="password">Conferma password</label>
-    <input type="password" name="password2" id="password2" required>
+        <label for="password">Conferma password</label>
+        <input type="password" name="password2" id="password2" required>
 
-    <span class ="bottone"><input type="submit" value="Invia">
-    </span>
+        <span class ="bottone"><input type="submit" value="Invia">
+        </span>
 
-    <p>Sei già registrato? Fai il <a href="login.php">login</p></a>
-</form>
-
+        <p>Sei già registrato? Fai il <a href="login.php">login</p></a>
+    </form>
+</div>
+        
 <hr/>
 <div class="crediti">
     <p>Responsabili del sito: 
