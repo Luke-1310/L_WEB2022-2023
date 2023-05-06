@@ -42,6 +42,14 @@ html {
     left: 16px;
   }
   
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+
   form {
     display: flex;
     flex-direction: column;
