@@ -25,7 +25,11 @@
     <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
 </div>
 
-<div class="container">
+<div class="rotating-figure">
+   <img src = "res/IMG_GIF/locked_book.png" alt="locked_book.png" width="80%"/></a>
+</div>
+
+<div class="container_reg">
 
     <form action = "res/PHP/register.php" method="POST">
 

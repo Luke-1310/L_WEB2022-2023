@@ -30,25 +30,50 @@ html {
     font-style: oblique;
   }
   
-  h3 {
+h3 {
     font-family: 'Monaco', monospace;
     font-style: oblique;
     color: #ff0000;
-  }
+}
 
-  .home {
+.home {
     position: absolute;
     top: 8px;
     left: 16px;
-  }
+}
   
-  .container{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
 }
 
+.container_reg{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}   
+
+
+.rotating-figure {
+    position: absolute;
+    top: 80px;
+    left: 730px;
+    width: 80px;
+    animation: rotate 4s infinite linear;
+}
+  
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
 
   form {
     display: flex;

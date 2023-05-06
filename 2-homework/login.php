@@ -25,8 +25,13 @@
     <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
 </div>
 
+<div class="rotating-figure">
+   <img src = "res/IMG_GIF/locked_book.png" alt="locked_book.png" width="80%"/></a>
+</div>
+
 <div class="container">
-    <form action = "res/PHP/login.php" method="POST">
+
+<form action = "res/PHP/login.php" method="POST">
     
     <?php
         if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
