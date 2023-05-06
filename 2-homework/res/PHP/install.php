@@ -85,6 +85,15 @@ if ($conn->query($tab_recensione) === FALSE) {
     echo "Errore nella creazione della tabella utente " . $conn->error;
 }
 
+$ins_utente = "INSERT INTO `utente`(`username`, `email`, `password`)
+    VALUES ('prova', 'prova1@gmail.com', 'prova')";
+
+if ($conn->query($ins_utente) === FALSE) {
+    echo "Errore negli inserimenti nella tabella utente" . $conn->error;
+}
+
+//alla fine della creazione siverrà reindirizzati alla homepage
+header('Location: ../../homepage.php');
 
 // Chiude la connessione al database
 $conn->close();

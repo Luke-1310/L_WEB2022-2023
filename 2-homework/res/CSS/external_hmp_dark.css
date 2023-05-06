@@ -3,8 +3,8 @@ html{
 }
 
 body{
-    background-color: black;
-    color: white;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
 .titolo{
@@ -14,7 +14,6 @@ body{
     background-color: none;
     margin:5px;
     text-align: center;
-    color: white;
 }
 
 .main{
@@ -53,25 +52,23 @@ h2{
   .menu li a {
     display: block;
     padding: 10px;
+    color: #ffffff;
     text-decoration: none;                   /*rimuove la sottolineatura dei link*/
-    color: white;
   }
   
   .menu li a:hover {
-    background-color: black;                /*definisce il tipo di visualizzazione (colore di background) del link quando ci sta il cursore*/
-    color: #fff;                               /* colore del testo*/
+    background-color: #1a1a1a;                /*definisce il tipo di visualizzazione (colore di background) del link quando ci sta il cursore*/                            
   }
 
 .lista{
     text-align: center;
-    color: white;
 }
 
   .lista ul{
     padding:20px;
     padding-top:10px;
     padding-bottom:10px;
-    background-color: black;
+    background-color: #1a1a1a;
     display: inline-block;
     border-style: solid;
     margin-inline-start: 150px;        /*distanza tra la fine della prima casella e l'inizio dell'altra*/
