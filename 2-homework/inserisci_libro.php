@@ -49,7 +49,7 @@
     ?>
 
     <form action = "res/PHP/inserisci_libro.php" method="POST">
-
+        
         <label for="titolo">Titolo</label>
         <input type="text" name="titolo" id="titolo" required>
 
