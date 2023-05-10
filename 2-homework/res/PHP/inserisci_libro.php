@@ -18,7 +18,7 @@ $controllo_ISBN = "SELECT* FROM libro l WHERE l.ISBN13 = '$ISBN'";
 $ris = mysqli_query($connessione, $controllo_ISBN);
 
 if(mysqli_num_rows($ris) > 0){
-    $_SESSION['errore'] = 'true';
+    $_SESSION['errore_i'] = 'true';
     header('Location:../../inserisci_libro.php'); //header sono l'analogo degli href
     exit(1);
 }

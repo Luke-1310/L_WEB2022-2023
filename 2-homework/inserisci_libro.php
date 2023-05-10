@@ -37,9 +37,9 @@
 <div class="container">
 
     <?php
-            if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
+            if(isset($_SESSION['errore_i']) && $_SESSION['errore_i'] == 'true'){//isset verifica se errore è settata
                 echo "<h3>ISBN GIA' INSERITO!</h3>";
-                unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
+                unset($_SESSION['errore_i']);//la unsetto altrimenti rimarrebbe la scritta
             }
 
             if(isset($_SESSION['errore_t']) && $_SESSION['errore_t'] == 'true'){//isset verifica se errore è settata
