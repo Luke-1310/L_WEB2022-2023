@@ -39,6 +39,18 @@
     
     <form action = "res/PHP/recensione.php" method="POST">
 
+    <?php
+            if(isset($_SESSION['errore_uu']) && $_SESSION['errore_uu'] == 'true'){//isset verifica se errore è settata
+                echo "<h3>NOME DEL UTENTE NON TROVATO!</h3>";
+                unset($_SESSION['errore_uu']);//la unsetto altrimenti rimarrebbe la scritta
+            }
+
+            if(isset($_SESSION['errore_tt']) && $_SESSION['errore_tt'] == 'true'){//isset verifica se errore è settata
+                echo "<h3>TITOLO DEL LIBRO NON TROVATO!</h3>";
+                unset($_SESSION['errore_tt']);//la unsetto altrimenti rimarrebbe la scritta
+            }
+    ?>
+
         <label for="titolo">Inserisci il titolo</label>
         <input type="text" name="titolo" id="titolo" required>
     

@@ -22,6 +22,12 @@ body{
     left: 16px;
 }
 
+h3 {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    color: #ff0000;
+}
+
 .container{
     display: flex;
     justify-content: center;

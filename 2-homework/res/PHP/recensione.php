@@ -14,6 +14,7 @@ $testo = $connessione->real_escape_string($_POST['testo']);
 $controllo_id_utente = "SELECT u.id FROM utente u WHERE u.username = '{$_SESSION['nome']}'";
 $ris = mysqli_query($connessione, $controllo_id_utente);
 
+//controllo forse rindondante, l'utente deve per forza essere loggato per scrivere una recensione
 if(mysqli_num_rows($ris) != 1){
     $_SESSION['errore_uu'] = 'true';
     header('Location:../../consigliati.php'); //header sono l'analogo degli href
@@ -26,6 +27,7 @@ $id_utente = $row['id'];
 $controllo_id_libro = "SELECT l.id FROM libro l WHERE l.titolo = '$titolo'";
 $ris_t = mysqli_query($connessione, $controllo_id_libro);
 
+//controllo importante, serve per verificare se il titolo del libro che si vuole recensire esiste nel db
 if(mysqli_num_rows($ris_t) != 1){
     $_SESSION['errore_tt'] = 'true';
     header('Location:../../recensione.php');
