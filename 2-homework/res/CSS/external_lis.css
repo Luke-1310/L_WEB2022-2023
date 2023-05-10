@@ -1,0 +1,47 @@
+html{
+    border-style: solid;
+}
+
+body{
+    background-color: rgb(239, 209, 179);
+}
+
+.titolo{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    list-style: none;
+    background-color: none;
+    margin:5px;
+    text-align: center;
+    color: black;
+}
+
+h2{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+}
+
+h3{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    color:red;
+}
+
+.home{
+    position: absolute;
+    top:8px;
+    left:16px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.crediti{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    text-align: center;
+  }

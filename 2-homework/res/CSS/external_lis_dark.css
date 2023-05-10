@@ -1,0 +1,53 @@
+/* Stile del bordo per l'intero documento HTML */
+html {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+  }
+  
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.titolo {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    list-style: none;
+    background-color: transparent;
+    margin: 5px;
+    text-align: center;
+}
+  
+h2 {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+  }
+  
+h3 {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    color: #ff0000;
+}
+
+.home {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+  
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+  
+.crediti {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    text-align: center;
+    color: #ffffff; 
+  }
+  
