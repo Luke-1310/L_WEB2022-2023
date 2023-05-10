@@ -12,7 +12,25 @@ $ISBN = intval($connessione->real_escape_string($_POST['ISBN'])); //converto la 
 $lunghezza = intval($connessione->real_escape_string($_POST['lunghezza'])); //converto la stringa in intero
 $data = $connessione->real_escape_string($_POST['data']);
 $autore = $connessione->real_escape_string($_POST['autore']);
-$img = $connessione->real_escape_string($_POST['img']);
+
+// Verifica se è stato caricato un file
+if(isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
+    $img_tmp_name = $_FILES['img']['tmp_name'];
+    $img_name = $_FILES['img']['name'];
+
+    // Leggi il contenuto del file immagine come binario
+    $img_bin = file_get_contents($img_tmp_name);
+
+    // Codifica l'immagine in binario utilizzando base64
+    $img_base64 = base64_encode($img_bin);
+
+    // Esegui l'escape del valore codificato dell'immagine
+    $img = $connessione->real_escape_string($img_base64);
+} else {
+    // Se non è stato caricato alcun file o si è verificato un errore, gestisci di conseguenza
+    // Ad esempio, puoi impostare un valore predefinito o mostrare un messaggio di errore
+    $img = ""; // Imposta un valore predefinito vuoto per l'immagine
+}
 
 $controllo_ISBN = "SELECT* FROM libro l WHERE l.ISBN13 = '$ISBN'"; 
 $ris = mysqli_query($connessione, $controllo_ISBN);
@@ -34,7 +52,6 @@ if(mysqli_num_rows($ris_t) > 0){
 
 $sql = "INSERT INTO libro (titolo, ISBN13, lunghezza, data_uscita, immagine, autore) VALUES ('$titolo', '$ISBN', '$lunghezza', '$data', '$img', '$autore')";
 $ins = mysqli_query($connessione, $sql);
-
 header('Location:../../homepage.php');
 
 ?>

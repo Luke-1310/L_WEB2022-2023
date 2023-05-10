@@ -48,28 +48,54 @@ foreach($ris as $row){
     echo"<div class=\"grid\">";
         echo"<div class=\"container-1\">";
             echo"<table>";
+
                 echo "<tr>";             
                 echo"<th> Titolo originale </th>";      
                 echo"<td>" . $row['titolo'] ."</td>";
                 echo"</tr>";
+
+                echo "<tr>";             
+                echo"<th> ISBN-13 </th>";      
+                echo"<td>" . $row['ISBN13'] ."</td>";
+                echo"</tr>";
+
+                echo "<tr>";             
+                echo"<th> Numero di pagine </th>";      
+                echo"<td>" . $row['lunghezza'] ."</td>";
+                echo"</tr>";
+
+                echo "<tr>";             
+                echo"<th> Autore </th>";      
+                echo"<td>" . $row['autore'] ."</td>";
+                echo"</tr>";
+
+                echo "<tr>";             
+                echo"<th> Data di uscita </th>";      
+                echo"<td>" . $row['data_uscita'] ."</td>";
+                echo"</tr>";
+
+                echo "<tr>";             
+                echo"<th> Voto </th>";      
+                echo"<td>" . $row['voto'] ."</td>";
+                echo"</tr>";
+
             echo"</table>";
         echo"</div>";
 
     echo "<div class =\"container-2\">";
-        echo "<p>" . $row['testo']. "<br/>" . "<br/>" . $row['username']. "</p>";
+        echo "<p>" . $row['testo']. "<br/>" . "<br/>" . "<strong>" . "Scritta da: " .$row['username']. "</strong>" . "</p>";
     echo"</div>";
 
     echo "<div class =\"container-3\">";
-        $img_bin = $row['immagine'];
-        $img_bin = 'data:image/jpg;base64,' . base64_encode($img_bin);
-        echo '<img src="' . $img_bin . '" alt="Immagine">';
+    $img_bin = $row['immagine'];
+    echo '<img src="data:image/jpeg;base64,' . $img_bin . '" alt="Immagine">';
     echo "</div>";
-
 echo "</div>";
+echo "<hr/>";
+
 }
 ?>
 
-<hr/>
 <div class="crediti">
     <p>Responsabili del sito: 
     <a href="mailto:privitera.1938225@studenti.uniroma1.it">privitera.1938225@studenti.uniroma1.it</a>    

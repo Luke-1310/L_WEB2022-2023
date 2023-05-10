@@ -36,26 +36,31 @@
 
 <div class="container">
 
-    <h3>Ecco i titoli dei libri nel database:</h3>
-
     <?php
 
         require("res/PHP/connection.php");
 
         $connessione = new mysqli($host, $user, $password, $db);
         
-        $query = "SELECT l.titolo  FROM libro l";
+        $query = "SELECT* FROM libro";
         $result = mysqli_query($connessione, $query);
 
         if (mysqli_num_rows($result) > 0) {
 
             while ($row = mysqli_fetch_assoc($result)) {
-                echo $row['titolo'] . "<br/>" . "<br/>";
+                
+                echo"<div class = row>";
+                    echo"<div class = item>";
+                        echo "<p>" . $row['titolo'] . "<br/>" . "<br/>" . "</p>";
+                        $img_bin = $row['immagine'];
+                        echo '<img src="data:image/jpeg;base64,' . $img_bin . '" alt="Immagine">';
+                    echo"</div>";
+                echo"</div>";
             }
         } 
         
         else {
-            echo "Nessun record trovato.";
+            echo "Nessun record trovato";
         }
 
         mysqli_close($connessione);
