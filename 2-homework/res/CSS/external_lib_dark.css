@@ -1,0 +1,69 @@
+/* Stile del bordo per l'intero documento HTML */
+html {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+  }
+  
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .titolo {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    list-style: none;
+    background-color: transparent;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  .main {
+    margin-left: 160px; /* Stessa larghezza della barra laterale per evitare sovrapposizioni */
+    font-size: 20px; /* Aumento la dimensione del testo */
+    padding: 0px 10px;
+  }
+  
+  h2 {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+  }
+
+.home {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+  
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+  form label {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    margin-bottom: 10px;
+    color: #ffffff; 
+  }
+  
+  input {
+    margin-bottom: 20px;
+  }
+  
+  .crediti {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    text-align: center;
+    color: #ffffff; 
+  }
+  

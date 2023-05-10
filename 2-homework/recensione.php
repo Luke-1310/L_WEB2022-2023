@@ -35,24 +35,20 @@
     }
 ?> 
 
-<div class="main">
-    <h2>Benvenuti nella casa del libro!&#x1F4D6;</h2>
-    <p>Ciao a tutti, siamo Luca ed Alessandra, se vi piace leggere allora siete nel posto giusto! Condivideremo con voi la nostra passione per la lettura.</p>
-    <h2>Che tipo di lettori siamo?</h2>
+<div class="container">
+    
+    <form action = "res/PHP/recensione.php" method="POST">
 
-</div> 
+        <label for="testo">Inserisci recensione</label>
+        <input type="text" name="testo" id="testo" required>
 
-<div class="main">
+        <label for="voto">Inserisci il voto</label>
+        <input type="number" step="0.5" min="0" max="10" name="decimalNumber" id="decimalNumber" required>
 
-    <h2>Cos'è per noi leggere?&#x1F4DA;</h2>
-    <p>
-        "Interrogo i libri e mi rispondono. Alcuni mi portano il riso sulle labbra o la consolazione nel cuore.
-        Altri mi insegnano a conoscere me stesso" -Francesco Petrarca
-    </p>
+        <span class ="bottone"><input type="submit" value="Invia">
+        </span>
 
-    <p>
-        "Dimmi ciò che leggi e ti dirò chi sei' è vero; ma ti conoscerei meglio se mi dicessi quello che rileggi" -François Mauriac
-    </p>
+    </form>
 </div>
 
 <hr/>
