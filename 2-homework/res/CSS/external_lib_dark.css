@@ -1,8 +1,8 @@
 /* Stile del bordo per l'intero documento HTML */
 html {
     border-style: solid;
-    border-color: #000000;
-    border-width: 2px;
+    /*border-color: #000000;
+    border-width: 2px;*/
   }
   
   body {
@@ -19,12 +19,6 @@ html {
     text-align: center;
   }
   
-  .main {
-    margin-left: 160px; /* Stessa larghezza della barra laterale per evitare sovrapposizioni */
-    font-size: 20px; /* Aumento la dimensione del testo */
-    padding: 0px 10px;
-  }
-  
   h2 {
     font-family: 'Monaco', monospace;
     font-style: oblique;
@@ -39,18 +33,17 @@ html {
 h3 {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   font-family: 'Monaco', monospace;
   font-style: oblique;
   color: #ff0000;
 }
 
 .container{
-    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 70vh;
 }
 
 form {
