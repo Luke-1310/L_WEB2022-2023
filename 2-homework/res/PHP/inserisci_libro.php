@@ -8,8 +8,8 @@ $connessione = new mysqli($host, $user, $password, $db);
 
 //real_escape_string() è una funzione usata per creare una stringa valida per SQL
 $titolo = $connessione->real_escape_string($_POST['titolo']);
-$ISBN = $connessione->real_escape_string($_POST['ISBN']);
-$lunghezza = $connessione->real_escape_string($_POST['lunghezza']);
+$ISBN = intval($connessione->real_escape_string($_POST['ISBN'])); //converto la stringa in intero
+$lunghezza = intval($connessione->real_escape_string($_POST['lunghezza'])); //converto la stringa in intero
 $data = $connessione->real_escape_string($_POST['data']);
 $autore = $connessione->real_escape_string($_POST['autore']);
 $img = $connessione->real_escape_string($_POST['img']);
