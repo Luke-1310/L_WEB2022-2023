@@ -22,9 +22,18 @@
 <body>
     <h1 class="titolo">RECENSIONI! </h1>
 
-<div class="home">
-    <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
-</div>
+<?php
+    if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
+        echo "<div class=\"home\">";
+        echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home2.png\" alt=\"home.png\" width=\"10%\"/></a>";
+        echo "</div>";
+    }
+    else{
+        echo "<div class=\"home\">";
+        echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home.png\" alt=\"home.png\" width=\"10%\"/></a>";
+        echo "</div>";
+    }
+?> 
 
 <div class="main">
     <h2>Benvenuti nella casa del libro!&#x1F4D6;</h2>

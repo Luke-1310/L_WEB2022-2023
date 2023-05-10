@@ -21,19 +21,23 @@
 <body>
     <h1 class="titolo">PAGINA DI LOGIN</h1>
 
-<div class="home">
-    <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
-</div>
-
 <?php
     if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
         echo "<div class=\"rotating-figure\">";
         echo "<img src = \"res/IMG_GIF/locked_book_dark.png\" alt=\"locked_book_dark.png\"/></img>";
         echo "</div>";
+
+        echo "<div class=\"home\">";
+        echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home2.png\" alt=\"home.png\" width=\"10%\"/></a>";
+        echo "</div>";
     }
     else{
         echo "<div class=\"rotating-figure\">";
         echo "<img src = \"res/IMG_GIF/locked_book.png\" alt=\"locked_book.png\"/></img>";
+        echo "</div>";
+
+        echo "<div class=\"home\">";
+        echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home.png\" alt=\"home.png\" width=\"10%\"/></a>";
         echo "</div>";
     }
 ?> 

@@ -22,9 +22,18 @@
 <body>
     <h1 class="titolo">I NOSTRI CONSIGLI!&#x1F4A1;</h1>
 
-    <div class="home">
-        <a href = "homepage.php"><img src = "res/IMG_GIF/home3.png" alt="home.png" width="10%"/></a>
-    </div>
+<?php
+    if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
+        echo "<div class=\"home\">";
+        echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home2.png\" alt=\"home.png\" width=\"10%\"/></a>";
+        echo "</div>";
+    }
+    else{
+        echo "<div class=\"home\">";
+        echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home.png\" alt=\"home.png\" width=\"10%\"/></a>";
+        echo "</div>";
+    }
+?> 
     
 <h2><br/>Novecento</h2>
 
