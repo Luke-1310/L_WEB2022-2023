@@ -55,7 +55,7 @@
         <input type="text" name="titolo" id="titolo" required>
     
         <label for="testo">Inserisci recensione</label>
-        <input type="text" name="testo" id="testo" required>
+        <textarea name="testo" id="testo" required></textarea>
 
         <label for="voto">Inserisci il voto</label>
         <input type="number" step="0.5" min="0" max="10" name="voto" id="voto" required>

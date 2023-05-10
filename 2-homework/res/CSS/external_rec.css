@@ -58,6 +58,11 @@ input{
     padding: 0px 10px;
 }
 
+#testo{
+    height: 180px;
+    margin-bottom: 20px;
+}
+
 h2{
     font-family: 'Monaco', monospace;
     font-style: oblique;
