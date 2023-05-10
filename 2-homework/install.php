@@ -35,20 +35,6 @@ if ($conn->query($tab_utente) === FALSE) {
     echo "Errore nella creazione della tabella utente " . $conn->error;
 }
 
-//Crea la tabella autore se non esistente
-$tab_autore = "CREATE TABLE IF NOT EXISTS `autore` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,               
-    `nome` varchar(30) NOT NULL,
-    `cognome` varchar(30) NOT NULL,
-    `nazionalita` varchar(30) NOT NULL,
-    `data` date,
-    PRIMARY KEY (id)
-)";
-
-if ($conn->query($tab_autore) === FALSE) {
-    echo "Errore nella creazione della tabella autore " . $conn->error;
-}
-
 //Crea la tabella libro se non esistente
 $tab_libro = "CREATE TABLE IF NOT EXISTS `libro`(
     `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -57,9 +43,8 @@ $tab_libro = "CREATE TABLE IF NOT EXISTS `libro`(
     `lunghezza` int(4) NOT NULL,
     `data_uscita` date NOT NULL,
     `immagine` varchar(1000) NOT NULL,
-    `autore_ID` int(11),
-    PRIMARY KEY (id),
-    FOREIGN KEY (autore_ID) REFERENCES autore(id)
+    `autore_ID` int(11) NOT NULL,
+    PRIMARY KEY (id)
 )";
 
 if ($conn->query($tab_libro) === FALSE) {
