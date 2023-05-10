@@ -51,7 +51,7 @@
             }
     ?>
 
-        <label for="titolo">Inserisci il titolo</label>
+        <label for="titolo">Inserisci il titolo che vuoi recensire</label>
         <input type="text" name="titolo" id="titolo" required>
     
         <label for="testo">Inserisci recensione</label>

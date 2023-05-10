@@ -8,12 +8,12 @@ $connessione = new mysqli($host, $user, $password, $db);
 
 //real_escape_string() è una funzione usata per creare una stringa valida per SQL
 $titolo = $connessione->real_escape_string($_POST['titolo']);
-$ISBN = intval($connessione->real_escape_string($_POST['ISBN'])); //converto la stringa in intero
+$ISBN = $connessione->real_escape_string($_POST['ISBN']);
 $lunghezza = intval($connessione->real_escape_string($_POST['lunghezza'])); //converto la stringa in intero
 $data = $connessione->real_escape_string($_POST['data']);
 $autore = $connessione->real_escape_string($_POST['autore']);
 
-// Verifica se è stato caricato un file
+// Verifica se è stato caricato l'immagine
 if(isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
     $img_tmp_name = $_FILES['img']['tmp_name'];
     $img_name = $_FILES['img']['name'];
@@ -24,12 +24,10 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
     // Codifica l'immagine in binario utilizzando base64
     $img_base64 = base64_encode($img_bin);
 
-    // Esegui l'escape del valore codificato dell'immagine
     $img = $connessione->real_escape_string($img_base64);
 } else {
-    // Se non è stato caricato alcun file o si è verificato un errore, gestisci di conseguenza
-    // Ad esempio, puoi impostare un valore predefinito o mostrare un messaggio di errore
-    $img = ""; // Imposta un valore predefinito vuoto per l'immagine
+    // Se non è stato caricato alcun file o si è verificato un errore -> valore vuoto
+    $img = ""; 
 }
 
 $controllo_ISBN = "SELECT* FROM libro l WHERE l.ISBN13 = '$ISBN'"; 
