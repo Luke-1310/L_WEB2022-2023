@@ -14,8 +14,8 @@ $data = $connessione->real_escape_string($_POST['data']);
 $autore = $connessione->real_escape_string($_POST['autore']);
 $img = $connessione->real_escape_string($_POST['img']);
 
-$controllo_ISBN = "SELECT* FROM libro l WHERE l.libro = '$ISBN'"; 
-$ris = mysqli_query($connessione, $controllo);
+$controllo_ISBN = "SELECT* FROM libro l WHERE l.ISBN13 = '$ISBN'"; 
+$ris = mysqli_query($connessione, $controllo_ISBN);
 
 if(mysqli_num_rows($ris) > 0){
     $_SESSION['errore'] = 'true';
@@ -23,7 +23,7 @@ if(mysqli_num_rows($ris) > 0){
     exit(1);
 }
 
-$controllo_titolo = "SELECT* FROM libro l WHERE l.libro = '$titolo'";
+$controllo_titolo = "SELECT* FROM libro l WHERE l.titolo = '$titolo'";
 $ris_t = mysqli_query($connessione, $controllo_titolo);
 
 if(mysqli_num_rows($ris_t) > 0){

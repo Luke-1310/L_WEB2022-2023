@@ -57,7 +57,7 @@
         <input type="text" pattern="[0-9]{13}" maxlength="13" name="ISBN" id="ISBN" required>
 
         <label for="lunghezza">Numero Pagine</label>
-        <input type="text" pattern="[0-9]{1,4}" maxlength="4" name="numero" id="numero" required>
+        <input type="text" pattern="[0-9]{1,4}" maxlength="4" name="lunghezza" id="lunghezza" required>
     
         <label for="data">Data di uscita</label>
         <input type="date" name="data" id="data" required>
