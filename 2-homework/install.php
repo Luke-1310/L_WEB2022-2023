@@ -42,9 +42,10 @@ $tab_libro = "CREATE TABLE IF NOT EXISTS `libro`(
     `ISBN13` int(13) NOT NULL,
     `lunghezza` int(4) NOT NULL,
     `data_uscita` date NOT NULL,
-    `immagine` varchar(1000) NOT NULL,
+    `immagine` BLOB NOT NULL,
     `autore_ID` int(11) NOT NULL,
     PRIMARY KEY (id)
+   
 )";
 
 if ($conn->query($tab_libro) === FALSE) {
