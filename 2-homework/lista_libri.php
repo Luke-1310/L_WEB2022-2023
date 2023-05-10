@@ -36,6 +36,8 @@
 
 <div class="container">
 
+    <h3>Ecco i titoli dei libri nel database:</h3>
+
     <?php
 
         require("res/PHP/connection.php");
@@ -48,7 +50,7 @@
         if (mysqli_num_rows($result) > 0) {
 
             while ($row = mysqli_fetch_assoc($result)) {
-                echo $row['titolo'] . "<br>";
+                echo $row['titolo'] . "<br/>" . "<br/>";
             }
         } 
         

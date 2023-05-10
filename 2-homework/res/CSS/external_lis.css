@@ -34,10 +34,20 @@ h3{
 }
 
 .container{
+    margin-top: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 60vh;
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    font-size: 20px;
+    color:black;
+    background-color: white;
+    border-style: solid;
+    border-radius: 25px;
+    padding:20px;
 }
 
 .crediti{
