@@ -36,8 +36,14 @@ html {
     left: 16px;
 }
   
+h3 {
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    color: #ff0000;
+}
+
 .container{
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

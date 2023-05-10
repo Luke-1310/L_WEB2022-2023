@@ -2,10 +2,10 @@
     session_start();
 
     if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
-        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_log_dark.css\" type=\"text/css\" />";
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_lib_dark.css\" type=\"text/css\" />";
     }
     else{
-        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_log.css\" type=\"text/css\" />";
+        echo "<link rel=\"stylesheet\" href=\"res/CSS/external_lib.css\" type=\"text/css\" />";
     }
 ?>
 
@@ -35,6 +35,18 @@
 ?>  
 
 <div class="container">
+
+    <?php
+            if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
+                echo "<h3>ISBN GIA' INSERITO!</h3>";
+                unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
+            }
+
+            if(isset($_SESSION['errore_t']) && $_SESSION['errore_t'] == 'true'){//isset verifica se errore è settata
+                echo "<h3>TITOLO GIA' INSERITO!</h3>";
+                unset($_SESSION['errore_t']);//la unsetto altrimenti rimarrebbe la scritta
+            }
+    ?>
 
     <form action = "res/PHP/inserisci_libro.php" method="POST">
 
