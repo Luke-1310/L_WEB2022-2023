@@ -19,66 +19,46 @@
 </head>
 
 <body>
-    <h1 class="titolo">PAGINA DI REGISTRAZIONE</h1>
+    <h1 class="titolo">INSERISCI LIBRO</h1>
 
 <?php
     if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
-        echo "<div class=\"rotating-figure\">";
-        echo "<img src = \"res/IMG_GIF/locked_book_dark.png\" alt=\"locked_book_dark.png\"/></img>";
-        echo "</div>";
-
         echo "<div class=\"home\">";
         echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home2.png\" alt=\"home.png\" width=\"10%\"/></a>";
         echo "</div>";
     }
     else{
-        echo "<div class=\"rotating-figure\">";
-        echo "<img src = \"res/IMG_GIF/locked_book.png\" alt=\"locked_book.png\"/></img>";
-        echo "</div>";
-
         echo "<div class=\"home\">";
         echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home.png\" alt=\"home.png\" width=\"10%\"/></a>";
         echo "</div>";
     }
 ?>  
 
-<div class="container_reg">
+<div class="container">
 
-    <form action = "res/PHP/register.php" method="POST">
+    <form action = "res/PHP/inserisci_libro.php" method="POST">
 
-        <?php
-            if(isset($_SESSION['errore']) && $_SESSION['errore'] == 'true'){//isset verifica se errore è settata
-                echo "<h3>USERNAME GIÀ INSERITO!</h3>";
-                unset($_SESSION['errore']);//la unsetto altrimenti rimarrebbe la scritta
-            }
+        <label for="titolo">Titolo</label>
+        <input type="text" name="titolo" id="titolo" required>
 
-            if(isset($_SESSION['errore_e']) && $_SESSION['errore_e'] == 'true'){//isset verifica se errore è settata
-                echo "<h3>EMAIL GIÀ ESISTENTE!</h3>";
-                unset($_SESSION['errore_e']);//la unsetto altrimenti rimarrebbe la scritta
-            }
-        
-            if(isset($_SESSION['errore_p']) && $_SESSION['errore_p'] == 'true'){
-                echo "<h3>LE PASSWORD NON SONO UGUALI!</h3>";
-                unset($_SESSION['errore_p']);
-            }
-        ?>
+        <label for="ISBN">ISBN-13</label>
+        <input type="text" pattern="[0-9]{13}" maxlength="13" name="ISBN" id="ISBN" required>
 
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" required>
-
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
+        <label for="lunghezza">Numero Pagine</label>
+        <input type="text" pattern="[0-9]{1,4}" maxlength="4" name="numero" id="numero" required>
     
-        <label for="password">Conferma password</label>
-        <input type="password" name="password2" id="password2" required>
+        <label for="data">Data di uscita</label>
+        <input type="date" name="data" id="data" required>
+        
+        <label for="autore">Autore</label>
+        <input type="text" name="autore" id="autore" required>
+
+        <label for="img">Inserisci la copertina del libro</label>
+        <input type="file" name="img" id="img">
 
         <span class ="bottone"><input type="submit" value="Invia">
         </span>
-
-        <p>Sei già registrato? Fai il <a href="login.php">login</p></a>
+        
     </form>
 </div>
         

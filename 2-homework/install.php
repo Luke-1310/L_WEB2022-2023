@@ -43,7 +43,7 @@ $tab_libro = "CREATE TABLE IF NOT EXISTS `libro`(
     `lunghezza` int(4) NOT NULL,
     `data_uscita` date NOT NULL,
     `immagine` BLOB NOT NULL,
-    `autore_ID` int(11) NOT NULL,
+    `autore` varchar(50) NOT NULL,
     PRIMARY KEY (id)
    
 )";
