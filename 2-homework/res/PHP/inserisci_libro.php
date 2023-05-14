@@ -30,6 +30,7 @@ if(isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
     $img = ""; 
 }
 
+//controllo se l'ISBN inserito già esiste nel db
 $controllo_ISBN = "SELECT* FROM libro l WHERE l.ISBN13 = '$ISBN'"; 
 $ris = mysqli_query($connessione, $controllo_ISBN);
 

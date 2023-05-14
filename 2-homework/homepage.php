@@ -31,8 +31,10 @@
 
     <?php   
         echo "<form action = \"res/PHP/dark.php\" method='POST'>";
-        echo "<button name=\"bottone_c\" type=\"submit\" value= \"chiaro\">&#x2600</button>";
-        echo "<button name=\"bottone_s\" type=\"submit\" value= \"scuro\">&#x1F315</button>";
+        echo "<button name=\"bottone_c\" type=\"submit\" value= \"chiaro\">";
+        echo "<img src = \"res/IMG_GIF/light.png\" alt=\"sun.png\" width=\"80%\"/></img></button>";
+        echo "<button name=\"bottone_s\" type=\"submit\" value= \"scuro\">";
+        echo "<img src = \"res/IMG_GIF/dark.png\" alt=\"moon.png\" width=\"80%\"/></img></button>";
         echo "</form>";
 
         if(isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true'){     //isset verifica se loggato è settata

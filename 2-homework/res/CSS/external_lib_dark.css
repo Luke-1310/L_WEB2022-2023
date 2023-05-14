@@ -39,6 +39,49 @@ h3 {
   color: #ff0000;
 }
 
+.info-img{
+  display:flex;
+  flex-direction: row;
+}
+
+.information-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.icon {
+  background-color: blue;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.information-icon:hover .tooltip {
+  visibility: visible;
+}
+
 .container{
     display: flex;
     justify-content: center;

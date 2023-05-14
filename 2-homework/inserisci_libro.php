@@ -51,25 +51,30 @@
     <form action = "res/PHP/inserisci_libro.php" method="POST" enctype="multipart/form-data">
 
         <label for="titolo">Titolo</label>
-        <input type="text" name="titolo" id="titolo" required>
+        <input type="text" name="titolo" id="titolo" placeholder="I Promessi Sposi" required>
 
-        <label for="ISBN">ISBN-13</label>
-        <input type="text" pattern="[0-9]{13}" maxlength="13" name="ISBN" id="ISBN" required>
+        <label for="ISBN">ISBN 13 Numeri</label>
+        <input type="text" pattern="[0-9]{13}" maxlength="13" name="ISBN" id="ISBN" placeholder="9798431410840" required>
 
         <label for="lunghezza">Numero Pagine</label>
-        <input type="text" pattern="[0-9]{1,4}" maxlength="4" name="lunghezza" id="lunghezza" required>
+        <input type="text" pattern="[0-9]{1,4}" maxlength="4" name="lunghezza" id="lunghezza" placeholder="276" required>
     
         <label for="data">Data di uscita</label>
         <input type="date" name="data" id="data" required>
         
         <label for="autore">Autore</label>
-        <input type="text" name="autore" id="autore" required>
+        <input type="text" name="autore" id="autore" placeholder="Alessandro Manzoni" required>
 
-        <label for="img">Inserisci la copertina del libro</label>
+        <div class = "info-img">
+            <label for="img">Inserisci la copertina</label>
+            <div class="information-icon">
+                <span class="icon">i</span>
+                <span class="tooltip">L'immagine da inserire deve essere un .jpg</span>
+            </div>
+        </div>
         <input type="file" name="img" id="img">
 
-        <span class ="bottone"><input type="submit" value="Invia">
-        </span>
+        <span class ="bottone"><input type="submit" value="Invia"></span>
         
     </form>
 </div>
