@@ -89,10 +89,14 @@ if ($conn->query($ins_ut) === FALSE) {
 
 $img1 = convert_img('res/IMG_GIF/copertina_spy.jpg', $conn);
 $img2 = convert_img('res/IMG_GIF/copertina_900.jpg', $conn);
+$img3 = convert_img('res/IMG_GIF/copertina_cane.jpg', $conn);
+$img4 = convert_img('res/IMG_GIF/copertina_dost.jpg', $conn);
 
 $ins_lib = "INSERT INTO `libro` (`titolo`, `ISBN13`, `lunghezza`, `data_uscita`, `immagine`, `autore`) VALUES
 ('Spy x Family 1', '9788418271236', 216, '2023-05-06', '". $img1 . "' ,'Tastuya Endo'), 
-('Novecento', '9783455000955', 62, '1994-02-01', '". $img2 . "' ,'Alessandro Baricco')"; 
+('Novecento', '9783455000955', 62, '1994-02-01', '". $img2 . "' ,'Alessandro Baricco'),
+('Il fotocane', '9788868364601', 211, '2018-06-12', '". $img3 . "' ,'Stephen King'),
+('I fratelli Karamazov', '8807900792', 1114, '1879-01-01', '". $img4 . "' ,'Fedor Dostoevjski')"; 
 
 if ($conn->query($ins_lib) === FALSE) {
     echo "Errore nell'inserimento dei libri " . $conn->error;
@@ -100,7 +104,7 @@ if ($conn->query($ins_lib) === FALSE) {
 
 $ins_rec = "INSERT INTO `recensione` (`utente_ID`, `libro_ID`, `testo`, `voto`) VALUES
 ('1', '1', 'Pensavo fosse un manga passeggero, uno dei tanti, ed invece questo fumetto mi ha davvero conquistato! Esso racconta la storia di una spia, Twilight, che per compiere la sua missione si ritrova costretto ad inscenare una falsa famiglia insieme ad una moglie assassina e ad una figlia telepate! Il bello di questa strana famiglia è che nessuno dei membri conosce la vera identità di ciascuno ed è proprio questo il punto focale del manga, cioè che alla fine della fiera nessuno conosce davvero chi gli sta accanto. La storia dei protagonisti è poi condita con scene comiche al limite del surreale rendendo quindi il manga a tratti molto leggero ma a tratti molto profondo e riflessivo. Estremamente consigliato!', 9.5), 
-('2', '2', 'Bello', 8)"; 
+('2', '4', 'Bello', 9.5)"; 
 
 if ($conn->query($ins_rec) === FALSE) {
     echo "Errore nell'inserimento delle recensioni " . $conn->error;
