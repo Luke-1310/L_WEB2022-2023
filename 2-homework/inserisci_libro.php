@@ -53,7 +53,7 @@
         <label for="titolo">Titolo</label>
         <input type="text" name="titolo" id="titolo" placeholder="I Promessi Sposi" required>
 
-        <label for="ISBN">ISBN 13 Numeri</label>
+        <label for="ISBN">ISBN 13 Cifre</label>
         <input type="text" pattern="[0-9]{13}" maxlength="13" name="ISBN" id="ISBN" placeholder="9798431410840" required>
 
         <label for="lunghezza">Numero Pagine</label>
