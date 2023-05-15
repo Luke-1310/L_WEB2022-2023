@@ -104,13 +104,11 @@ if ($conn->query($ins_lib) === FALSE) {
 
 $ins_rec = "INSERT INTO `recensione` (`utente_ID`, `libro_ID`, `testo`, `voto`) VALUES
 ('1', '1', 'Pensavo fosse un manga passeggero, uno dei tanti, ed invece questo fumetto mi ha davvero conquistato! Esso racconta la storia di una spia, Twilight, che per compiere la sua missione si ritrova costretto ad inscenare una falsa famiglia insieme ad una moglie assassina e ad una figlia telepate! Il bello di questa strana famiglia è che nessuno dei membri conosce la vera identità di ciascuno ed è proprio questo il punto focale del manga, cioè che alla fine della fiera nessuno conosce davvero chi gli sta accanto. La storia dei protagonisti è poi condita con scene comiche al limite del surreale rendendo quindi il manga a tratti molto leggero ma a tratti molto profondo e riflessivo. Estremamente consigliato!', 9.5), 
-('2', '4', 'Bello', 9.5)"; 
+('2', '4', 'Da leggere assolutamente. Per Dostoevskij Hermann Hesse scriveva: Egli ha quella conoscenza della felicità, della saggezza e armonia, che però non si trovano lungo facili sentieri, ma lampeggiano a tratti lungo la via che costeggia la voragine, che non si colgono sorridendo, ma solo tra lacrime ed esausti di dolore. (...) Ci sono dei punti dove, da un mare di miseria e di squallore, si accende, commovente, infantile e delicato oltre ogni dire, qualcosa che è come la percezione del senso del mondo, come la certezza di una redenzione.Ed è infatti così che Dostoevskij riesce a descrivere i fratelli al lettore, profondamente facendolo entrare nella  psicologia dei personaggi e delle vicende che li riguardano.', 9.5)"; 
 
 if ($conn->query($ins_rec) === FALSE) {
     echo "Errore nell'inserimento delle recensioni " . $conn->error;
 }
-
-
 
 //alla fine della creazione siverrà reindirizzati alla homepage
 header('Location: homepage.php');
