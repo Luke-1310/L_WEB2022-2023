@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <libri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="libro.xsd">
+
   <book isbn="9788418271236" rating="5">
     <titolo>Spy x Family 1</titolo>
     <autore>
@@ -10,5 +11,6 @@
     <lunghezza>216</lunghezza>
     <anno>2017</anno>
     <img>../IMG_GIF/copertina_spy.jpg</img>
-    
+  </book>
+   
 </libri>
