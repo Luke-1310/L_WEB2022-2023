@@ -5,7 +5,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if (isset($_FILES["image"]) && $_FILES["image"]["error"] === UPLOAD_ERR_OK) {
 
     $targetDir = "immagini/"; // La cartella in cui salvare l'immagine
-    $targetFile = $targetDir . basename($_FILES["image"]["name"]);  
+    $targetFile = $targetDir . basename($_FILES["image"]["name"]);
+    $targetName = $_FILES["image"]["name"]; 
+    // echo $targetName;
     //questa riga di codice viene utilizzata per creare il percorso completo del file di destinazione, 
     //in base al percorso della cartella di destinazione specificato e al nome del file selezionato dall'utente durante il caricamento.
     
