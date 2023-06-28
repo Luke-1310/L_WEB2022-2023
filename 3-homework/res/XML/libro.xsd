@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">   <!-- xsd corrisponde al nome dello namespace -->
+
+<xsd:element name="libri">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="book" maxOccurs="unbounded">
+        </xsd:sequence>
+    </xsd:complexType>
+<xsd:element>
+
+<!-- l'id come lo gestisco? -->
+<!-- l'immagine come la gestisco? -->
+<xsd:element name="book">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="titolo"/>
+            <xsd:element ref="autore" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element ref="lunghezza"/>
+            <xsd:element ref="anno"/>
+            <xsd:element ref="img"/>
+        </xsd:sequence>
+
+    <xsd:attribute name="isbn" type="xsd:string" use="required"/>
+     <xsd:attribute name="rating" use="optional" default="-1">
+      <xsd:simpleType>
+	  <xsd:restriction base="xsd:integer">
+	   <xsd:enumeration value="1"/>
+	   <xsd:enumeration value="2"/>
+	   <xsd:enumeration value="3"/>
+       <xsd:enumeration value="4"/>
+       <xsd:enumeration value="5"/>
+	  </xsd:restriction>
+      </xsd:simpleType>
+   </xsd:attribute>
+   
+   </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="titolo" type="xsd:string"/>
+<xsd:element name="autore" type="nomeCognome" />
+<xsd:element name="lunghezza" type="xsd:integer"/>
+<xsd:element name="anno" type="xsd:integer"/>
+<xsd:element name="img" type="xsd:string"/>
+
+<xsd:complexType name="nomeCognome">
+      <xsd:sequence>
+         <xsd:element ref="nome"/>
+         <xsd:element ref="cognome"/>
+      </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="nome" type="xsd:string" />
+<xsd:element name="cognome" type="xsd:string" />
+
+</xsd:schema>
