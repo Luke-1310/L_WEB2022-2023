@@ -57,13 +57,19 @@
         <input type="text" pattern="[0-9]{13}" maxlength="13" name="ISBN" id="ISBN" placeholder="9798431410840" required>
 
         <label for="lunghezza">Numero Pagine</label>
-        <input type="text" pattern="[0-9]{1,4}" maxlength="4" name="lunghezza" id="lunghezza" placeholder="276" required>
-    
+        <input type="integer" pattern="[0-9]{1,4}" maxlength="4" name="lunghezza" id="lunghezza" placeholder="276" required>
+
         <label for="data">Data di uscita</label>
         <input type="date" name="data" id="data" required>
         
-        <label for="autore">Autore</label>
-        <input type="text" name="autore" id="autore" placeholder="Alessandro Manzoni" required>
+        <label for="nome">Nome autore</label>
+        <input type="text" name="nome" id="nome" placeholder="Alessandro" required>
+
+        <label for="cognome">Cognome autore</label>
+        <input type="text" name="cognome" id="cognome" placeholder="Manzoni" required>
+
+        <label for="rating">Rating</label>
+        <input type="integer" pattern="[1-5]" maxlength="1" name="rating" id="rating" placeholder="5" required>
 
         <div class = "info-img">
             <label for="img">Inserisci la copertina</label>

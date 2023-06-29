@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<libri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="libro.xsd">
-
-  <book isbn="9788418271236" rating="5">
-    <titolo>Spy x Family 1</titolo>
+<libri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libro.xsd">
+  <book isbn="1111111111111" rating="1">
+    <titolo>rgre</titolo>
     <autore>
-      <nome>Tastuya</nome>
-      <cognome>Endo</cognome>
+      <nome>Giovanni</nome>
+      <cognome>longhi</cognome>
     </autore>
-    <lunghezza>216</lunghezza>
-    <anno>2017</anno>
-    <img>../IMG_GIF/copertina_spy.jpg</img>
+    <lunghezza>2</lunghezza>
+    <data>2023-06-01</data>
+    <img>prova</img>
   </book>
-   
 </libri>

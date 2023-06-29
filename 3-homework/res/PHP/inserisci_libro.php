@@ -2,56 +2,76 @@
 
 session_start();
 
-require('connection.php');
+$title = $_POST['titolo'];
+$ISBN = $_POST['ISBN'];
+$lenght = $_POST['lunghezza'];
+$date = $_POST['data'];
+$name = $_POST['nome'];
+$surname = $_POST['cognome'];
+$rating = $_POST['rating'];
+$image = "prova";
 
-$connessione = new mysqli($host, $user, $password, $db);
+$xmlfile = "../XML/libri.xml";
+$xmlstring = "";
 
-//real_escape_string() è una funzione usata per creare una stringa valida per SQL
-$titolo = $connessione->real_escape_string($_POST['titolo']);
-$ISBN = $connessione->real_escape_string($_POST['ISBN']);
-$lunghezza = intval($connessione->real_escape_string($_POST['lunghezza'])); //converto la stringa in intero
-$data = $connessione->real_escape_string($_POST['data']);
-$autore = $connessione->real_escape_string($_POST['autore']);
 
-// Verifica se è stato caricato l'immagine
-if(isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
+foreach(file($xmlfile) as $nodo){
 
-    $img_tmp_name = $_FILES['img']['tmp_name'];
-    $img_name = $_FILES['img']['name'];
+    $xmlstring.= trim($nodo);
 
-    // Leggi il contenuto del file immagine come binario
-    $img_bin = file_get_contents($img_tmp_name);
-
-    // Codifica l'immagine in binario utilizzando base64
-    $img_base64 = base64_encode($img_bin);
-    $img = $connessione->real_escape_string($img_base64);
-    
-} else {
-    // Se non è stato caricato alcun file o si è verificato un errore -> valore vuoto
-    $img = ""; 
 }
 
-//controllo se l'ISBN inserito già esiste nel db
-$controllo_ISBN = "SELECT* FROM libro l WHERE l.ISBN13 = '$ISBN'"; 
-$ris = mysqli_query($connessione, $controllo_ISBN);
+$documento = new DOMDocument();
+$documento->loadXML($xmlstring);
 
-if(mysqli_num_rows($ris) > 0){
-    $_SESSION['errore_i'] = 'true';
-    header('Location:../../inserisci_libro.php'); //header sono l'analogo degli href
-    exit(1);
-}
+// if (file_exists($xmlfile)) {
+//     // Carica il file XML esistente se presente
+//     $documento->load($xmlfile);
+// } else {
+//     // Crea un nuovo documento XML se il file non esiste
+//     $documento->appendChild($documento->createElement('libri'));
+// }
 
-$controllo_titolo = "SELECT* FROM libro l WHERE l.titolo = '$titolo'";
-$ris_t = mysqli_query($connessione, $controllo_titolo);
+$libri = $documento->documentElement;
 
-if(mysqli_num_rows($ris_t) > 0){
-    $_SESSION['errore_t'] = 'true';
-    header('Location:../../inserisci_libro.php');
-    exit(1);
-}
+$libro = $documento->createElement('book');
 
-$sql = "INSERT INTO libro (titolo, ISBN13, lunghezza, data_uscita, immagine, autore) VALUES ('$titolo', '$ISBN', '$lunghezza', '$data', '$img', '$autore')";
-$ins = mysqli_query($connessione, $sql);
-header('Location:../../homepage.php');
+$titolo = $documento->createElement('titolo');
+$autore = $documento->createElement('autore');
+$nome = $documento->createElement('nome');
+$cognome = $documento->createElement('cognome');
+$lunghezza = $documento->createElement('lunghezza');
+$data = $documento->createElement('data');
+$img = $documento->createElement('img');
+
+$titolo->nodeValue = $title;
+
+$libro->appendChild($titolo);
+
+$nome->nodeValue = $name;
+$cognome->nodeValue = $surname;
+$autore->appendChild($nome);
+$autore->appendChild($cognome);
+$libro->appendChild($autore);
+$lunghezza->nodeValue = $lenght;
+$data->nodeValue = $date;
+$img->nodeValue = $image;
+
+$libro->setAttribute('isbn', $ISBN);
+$libro->setAttribute('rating', $rating);
+
+$libro->appendChild($lunghezza);
+$libro->appendChild($data);
+$libro->appendChild($img);
+
+$libri->appendChild($libro);
+
+$documento->formatOutput = true;
+$xml = $documento->saveXML();
+
+file_put_contents($xmlfile, $xml);
+
+// Controllo se l'ISBN inserito già esiste nel db
+// Controllo se il titolo inserito già esiste nel db
 
 ?>

@@ -17,8 +17,9 @@
         <xsd:element ref="titolo"/>
         <xsd:element ref="autore" minOccurs="1" maxOccurs="unbounded"/>
         <xsd:element ref="lunghezza"/>
-        <xsd:element ref="anno"/>
+        <xsd:element ref="data"/>
         <xsd:element ref="img"/>
+        <xsd:element ref="recensione" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
       <xsd:attribute name="isbn" type="xsd:string" use="required"/>
       <xsd:attribute name="rating" use="optional" default="1">
@@ -38,8 +39,9 @@
   <xsd:element name="titolo" type="xsd:string"/>
   <xsd:element name="autore" type="nomeCognome" />
   <xsd:element name="lunghezza" type="xsd:integer"/>
-  <xsd:element name="anno" type="xsd:integer"/>
+  <xsd:element name="data" type="xsd:date"/>
   <xsd:element name="img" type="xsd:string"/>
+  <xsd:element name="recensione" type="recUtente"/>
 
   <xsd:complexType name="nomeCognome">
     <xsd:sequence>
@@ -50,5 +52,15 @@
 
   <xsd:element name="nome" type="xsd:string" />
   <xsd:element name="cognome" type="xsd:string" />
+
+   <xsd:complexType name="recUtente">
+    <xsd:sequence>
+      <xsd:element ref="utente"/>
+      <xsd:element ref="rec"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="utente" type="xsd:string" />
+  <xsd:element name="rec" type="xsd:string" />
 
 </xsd:schema>
