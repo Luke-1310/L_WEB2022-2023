@@ -19,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       // Sposta il file dalla directory temporanea alla cartella di destinazione
       if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
-        echo "Immagine caricata con successo.";
+        $_SESSION['nome'] = $targetName;
+        header('Location:homepage.php');
       } 
       
       else {
