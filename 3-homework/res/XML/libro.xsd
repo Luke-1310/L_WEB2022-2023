@@ -9,8 +9,6 @@
     </xsd:complexType>
   </xsd:element>
 
-  <!-- l'id come lo gestisco? -->
-  <!-- l'immagine come la gestisco? -->
   <xsd:element name="book">
     <xsd:complexType>
       <xsd:sequence>
