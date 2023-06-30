@@ -24,11 +24,11 @@
 
    <ul class="menu">
     <li><a href="importante_leggere.php">Perché è importante leggere?</a></li>
-    <li><a href="consigliati.php">Recensioni a confronto</a></li>
+    <li><a href="consigliati.php">Recensioni dei libri</a></li>
     <li><a href="lista_libri.php">I libri presenti sul sito</a></li>
     <li><a href="https://www.lafeltrinelli.it/">Noi di solito compriamo i libri qui</a></li>
     <li><a href="https://www.qlibri.it/">Per altre recensioni clicca qui</a></li>
-    <li><a href="res/PHP/validator.php">Per altre usare il validatore clicca qui</a></li>
+    <li><a href="res/PHP/validator.php">Per usare il validatore clicca qui</a></li>
 
     <?php   
         echo "<form action = \"res/PHP/dark.php\" method='POST'>";
