@@ -11,10 +11,32 @@ $date = $_POST['data'];
 $name = $_POST['nome'];
 $surname = $_POST['cognome'];
 $rating = $_POST['rating'];
-$image = "prova";
+
 
 $xmlfile = "../XML/libri.xml";  //Percorso del file XML
 $xmlstring = "";
+
+//come prima cosa mi voglio ricavare il valore che andrà nel campo img del file XML
+
+$dirDestinazione = "../IMG_USER/"; // Assegna la locazione di destinazione delle immagini
+$nuovoNomeImg = $ISBN; // Assegna il nuovo nome dell'immagine (nel tuo caso, l'ISBN)
+
+$ext = pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION); // Ricavo l'estensione del file originale
+$targetFile = $dirDestinazione . $nuovoNomeImg . "." . $ext; // Percorso completo con il nuovo nome
+
+// Sposta il file nella directory di destinazione con il nuovo nome
+if(move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
+
+    echo "Il file è stato caricato con successo.";
+} 
+else {
+  
+    echo "Si è verificato un errore durante il caricamento del file.";
+}
+
+//Mi prendo il nome dell'immagine e la metto in una nuova variabile per chiarire meglio il codice
+
+$image = $nuovoNomeImg;
 
 // Il punto (.) prima dell'uguale (=) indica che stiamo concatenando il valore alla variabile anziché sostituire completamente il valore presente in esso.
 // La funzione trim() viene utilizzata per rimuovere eventuali spazi bianchi iniziali o finali dal contenuto di ogni riga del file XML prima di concatenarlo alla variabile $xmlstring.
