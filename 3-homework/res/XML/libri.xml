@@ -20,4 +20,24 @@
     <data>2023-06-09</data>
     <img>1211212121215</img>
   </book>
+  <book isbn="1211212121213" rating="3">
+    <titolo>Spy x Family2</titolo>
+    <autore>
+      <nome>cirino</nome>
+      <cognome>longhi</cognome>
+    </autore>
+    <lunghezza>2</lunghezza>
+    <data>2023-06-09</data>
+    <img>1211212121213</img>
+  </book>
+  <book isbn="1211212121219" rating="3">
+    <titolo>Spy x Family1</titolo>
+    <autore>
+      <nome>cirino</nome>
+      <cognome>longhi</cognome>
+    </autore>
+    <lunghezza>2</lunghezza>
+    <data>2023-06-09</data>
+    <img>1211212121219</img>
+  </book>
 </libri>

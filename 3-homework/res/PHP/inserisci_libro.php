@@ -13,21 +13,15 @@ $rating = $_POST['rating'];
 
 //come prima cosa mi voglio ricavare il valore che andrà nel campo img del file XML
 
-$dirDestinazione = "../IMG_USER/"; // Assegna la locazione di destinazione delle immagini
-$nuovoNomeImg = $ISBN; // Assegna il nuovo nome dell'immagine (nel tuo caso, l'ISBN)
+$dirDestinazione = "../IMG_USER/"; //Assegna la locazione di destinazione delle immagini
+$nuovoNomeImg = $ISBN; //Assegna il nuovo nome dell'immagine il quale corrisponde all'ISBN, mi sembra un buon criterio 
 
-$ext = pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION); // Ricavo l'estensione del file originale
-$targetFile = $dirDestinazione . $nuovoNomeImg . "." . $ext; // Percorso completo con il nuovo nome
+//$_FILES["img"]["name"] contiene il nome originale del file caricato dall'utente tramite il campo di input con name="img"
+$ext = pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION); //Ricava l'estensione del file originale, 
+$targetFile = $dirDestinazione . $nuovoNomeImg . "." . $ext; //Percorso completo con il nuovo nome
 
-// Sposta il file nella directory di destinazione con il nuovo nome
-if(move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile)) {
-
-    echo "Il file è stato caricato con successo.";
-} 
-else {
-  
-    echo "Si è verificato un errore durante il caricamento del file.";
-}
+//Sposta il file nella directory di destinazione con il nuovo nome
+move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile);
 
 //Mi prendo il nome dell'immagine e la metto in una nuova variabile per chiarire meglio il codice
 
@@ -143,7 +137,7 @@ $xml = $documento->saveXML();   //saveXML è un metodo che restituisce il docume
 
 file_put_contents($xmlfile, $xml);  //sovrascrive il contenuto del vecchio file XML con quello nuovo
 
-header('Location:../../homepage.php');
+header('Location:../../lista_libri.php');
 
 // Controllo se il titolo inserito già esiste nel db
 
