@@ -3,7 +3,6 @@
 session_start();
 
 //Recupero i file inviati tramite il form HTML in inserisci_libro.php
-
 $title = $_POST['titolo'];
 $ISBN = $_POST['ISBN'];
 $lenght = $_POST['lunghezza'];
@@ -11,10 +10,6 @@ $date = $_POST['data'];
 $name = $_POST['nome'];
 $surname = $_POST['cognome'];
 $rating = $_POST['rating'];
-
-
-$xmlfile = "../XML/libri.xml";  //Percorso del file XML
-$xmlstring = "";
 
 //come prima cosa mi voglio ricavare il valore che andrà nel campo img del file XML
 
@@ -40,6 +35,9 @@ $image = $nuovoNomeImg;
 
 // Il punto (.) prima dell'uguale (=) indica che stiamo concatenando il valore alla variabile anziché sostituire completamente il valore presente in esso.
 // La funzione trim() viene utilizzata per rimuovere eventuali spazi bianchi iniziali o finali dal contenuto di ogni riga del file XML prima di concatenarlo alla variabile $xmlstring.
+
+$xmlfile = "../XML/libri.xml";  //Percorso del file XML
+$xmlstring = "";
 
 foreach(file($xmlfile) as $nodo){   //Leggo il contenuto del file XML
 
