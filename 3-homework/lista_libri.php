@@ -36,36 +36,46 @@
 
 <div class="container">
 
-    <?php
+<?php
+    
+    //Percorso del file XML
+    $xmlFile = "res/XML/libri.xml";
 
-        require("res/PHP/connection.php");
+    //Carico il file XML prendendo come parametro il percorso del file XML voluto
+    $xml = simplexml_load_file($xmlFile);
 
-        $connessione = new mysqli($host, $user, $password, $db);
+    //Ciclo per ciascun elemento book
+    foreach ($xml->book as $book) {
         
-        $query = "SELECT* FROM libro";
-        $result = mysqli_query($connessione, $query);
+        echo"<div class = row>";
+            
+            echo"<div class = item>";
+            
+                //Mi prendo il titolo del libro corrente 
+                $titolo = (string)$book->titolo;
 
-        if (mysqli_num_rows($result) > 0) {
+                //Ricavo l'ISBN del libro, il quale corrisponde al nome dell'immagine del libro
+                $ISBN = (string)$book->attributes()->isbn;
 
-            while ($row = mysqli_fetch_assoc($result)) {
-                
-                echo"<div class = row>";
-                    echo"<div class = item>";
-                        echo "<p>" . $row['titolo'] . "<br/>" . "<br/>" . "</p>";
-                        $img_bin = $row['immagine'];
-                        echo '<img src="data:image/jpeg;base64,' . $img_bin . '" alt="Immagine">';
-                    echo"</div>";
-                echo"</div>";
-            }
-        } 
-        
-        else {
-            echo "Nessun record trovato";
-        }
+                //Estensione dell'immagine la quale dovrebbe essere jpg
+                $ext = ".jpg";
 
-        mysqli_close($connessione);
+                //Compongo il nome completo dell'immagine da stampare
+                $nomeImg = $ISBN . $ext;
+
+                //Percorso dell'immagine
+                $pathImg = "res/IMG_USER/";
+
+                //Stampa del libro: titolo + immagine
+                echo "<p>" . $titolo . "<br/>" . "<br/>" ."</p>" ;
+                echo "<img src='" . $pathImg . $nomeImg . "' alt='Copertina.jpg'>";
+
+            echo"</div>";
+
+        echo"</div>";
+    }
+
     ?>
-
 </div>
 
 <hr/>
