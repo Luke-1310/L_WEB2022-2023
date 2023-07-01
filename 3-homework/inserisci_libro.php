@@ -68,9 +68,6 @@
         <label for="cognome">Cognome autore</label>
         <input type="text" name="cognome" id="cognome" placeholder="Manzoni" required>
 
-        <label for="rating">Rating</label>
-        <input type="integer" pattern="[1-5]" maxlength="1" name="rating" id="rating" placeholder="5" required>
-
         <div class = "info-img">
             <label for="img">Inserisci la copertina</label>
             <div class="information-icon">

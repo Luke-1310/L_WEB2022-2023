@@ -20,17 +20,6 @@
         <xsd:element ref="recensione" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
       <xsd:attribute name="isbn" type="xsd:string" use="required"/>
-      <xsd:attribute name="rating" use="optional" default="1">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:integer">
-            <xsd:enumeration value="1"/>
-            <xsd:enumeration value="2"/>
-            <xsd:enumeration value="3"/>
-            <xsd:enumeration value="4"/>
-            <xsd:enumeration value="5"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:attribute>
     </xsd:complexType>
   </xsd:element>
 
@@ -55,10 +44,12 @@
     <xsd:sequence>
       <xsd:element ref="utente"/>
       <xsd:element ref="rec"/>
+      <xsd:element ref="rating"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:element name="utente" type="xsd:string" />
   <xsd:element name="rec" type="xsd:string" />
+  <xsd:element name="rating" type="xsd:integer"/>
 
 </xsd:schema>

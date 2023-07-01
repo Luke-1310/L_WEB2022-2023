@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <libri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libro.xsd">
-  <book isbn="1111111111111" rating="1">
-    <titolo>rgre</titolo>
-    <autore>
-      <nome>Giovanni</nome>
-      <cognome>longhi</cognome>
-    </autore>
-    <lunghezza>2</lunghezza>
-    <data>2023-06-01</data>
-    <img>prova</img>
-  </book>
-  <book isbn="1211212121215" rating="3">
-    <titolo>Spy x Family3</titolo>
+  <book isbn="1111111111111">
+    <titolo>Novecento</titolo>
     <autore>
       <nome>cirino</nome>
-      <cognome>longhi</cognome>
+      <cognome>cenci</cognome>
     </autore>
-    <lunghezza>2</lunghezza>
-    <data>2023-06-09</data>
-    <img>1211212121215</img>
-  </book>
-  <book isbn="1211212121213" rating="3">
-    <titolo>Spy x Family2</titolo>
-    <autore>
-      <nome>cirino</nome>
-      <cognome>longhi</cognome>
-    </autore>
-    <lunghezza>2</lunghezza>
-    <data>2023-06-09</data>
-    <img>1211212121213</img>
-  </book>
-  <book isbn="1211212121219" rating="3">
-    <titolo>Spy x Family1</titolo>
-    <autore>
-      <nome>cirino</nome>
-      <cognome>longhi</cognome>
-    </autore>
-    <lunghezza>2</lunghezza>
-    <data>2023-06-09</data>
-    <img>1211212121219</img>
+    <lunghezza>1</lunghezza>
+    <data>2023-06-29</data>
+    <img>1111111111111</img>
   </book>
 </libri>

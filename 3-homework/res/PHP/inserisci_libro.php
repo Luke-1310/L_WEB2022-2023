@@ -9,7 +9,6 @@ $lenght = $_POST['lunghezza'];
 $date = $_POST['data'];
 $name = $_POST['nome'];
 $surname = $_POST['cognome'];
-$rating = $_POST['rating'];
 
 //come prima cosa mi voglio ricavare il valore che andrà nel campo img del file XML
 
@@ -124,7 +123,6 @@ if ($isbnExists) {
 } 
 
 $libro->setAttribute('isbn', $ISBN);    // Imposto l'attributo 'isbn' del nodo 'book' con il valore ottenuto dal form
-$libro->setAttribute('rating', $rating);     // Imposto l'attributo 'rating' del nodo 'book' con il valore ottenuto dal form
 
 $libro->appendChild($lunghezza);
 $libro->appendChild($data);
