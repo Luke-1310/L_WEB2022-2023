@@ -1,46 +1,44 @@
-html{
+html {
     border-style: solid;
 }
 
-body{
+body {
     background-color: rgb(239, 209, 179);
 }
 
-.titolo{
+.titolo {
     font-family: 'Monaco', monospace;
     font-style: oblique;
     list-style: none;
     background-color: none;
-    margin:5px;
+    margin: 5px;
     text-align: center;
     color: black;
 }
 
-h2{
+h2 {
     font-family: 'Monaco', monospace;
     font-style: oblique;
 }
 
-
-
-.home{
+.home {
     position: absolute;
-    top:8px;
-    left:16px;
+    top: 8px;
+    left: 16px;
 }
 
 .container {
     margin-top: 40px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .row {
     display: flex;
-    flex-wrap: wrap; /*Gli elementi all'interno della riga si sposteranno su righe separate */
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -48,36 +46,33 @@ h2{
     border-style: solid;
     border-radius: 25px;
     margin: 20px;
-    text-decoration: none;
-  }
+}
 
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    text-decoration: none;
 }
-  
+
 .item img {
     width: 100px;
 }
-  
+
 .item p {
     margin-top: 10px;
     font-family: 'Monaco', monospace;
     font-style: oblique;
     font-size: 20px;
     color: black;
-    text-decoration: none;
-} 
+}
 
 .item a{
     text-decoration: none; /* Rimuove la sottolineatura dei link */
 }
 
-.crediti{
+.crediti {
     font-family: 'Monaco', monospace;
     font-style: oblique;
     text-align: center;
-  }
+}

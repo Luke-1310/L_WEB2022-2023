@@ -2,10 +2,10 @@
    session_start();
 
    if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
-       echo "<link rel=\"stylesheet\" href=\"res/CSS/external_lis_dark.css\" type=\"text/css\" />";
+       echo "<link rel=\"stylesheet\" href=\"res/CSS/external_info_dark.css\" type=\"text/css\" />";
    }
    else{
-       echo "<link rel=\"stylesheet\" href=\"res/CSS/external_lis.css\" type=\"text/css\" />";
+       echo "<link rel=\"stylesheet\" href=\"res/CSS/external_info.css\" type=\"text/css\" />";
    }
 ?>
 
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <h1 class="titolo">CATALOGO LIBRI</h1>
+    <h1 class="titolo">INFORMAZIONI LIBRO</h1>
 
 <?php
     if(isset($_COOKIE["tema"]) && $_COOKIE["tema"] == "scuro"){
@@ -67,8 +67,7 @@
                 $pathImg = "res/IMG_USER/";
 
                 //Stampa del libro: titolo + immagine
-                echo "<p>" . $titolo;
-                echo "<a href=\"libri_info.php\">&#x1F50D</a>" . "<br/>" . "<br/>" ."</p>";
+                echo "<p>" . $titolo . "<br/>" . "<br/>" ."</p>" ;
                 echo "<img src='" . $pathImg . $nomeImg . "' alt='Copertina.jpg'>";
 
             echo"</div>";
