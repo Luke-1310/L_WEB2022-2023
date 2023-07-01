@@ -50,4 +50,54 @@
     <data>1879-01-01</data>
     <img>9788807900792</img>
   </book>
+  <book isbn="9788822632593">
+    <titolo>Kaiju No. 8 3</titolo>
+    <autore>
+      <nome>Naoya</nome>
+      <cognome>Mutamoto</cognome>
+    </autore>
+    <lunghezza>192</lunghezza>
+    <data>2022-06-22</data>
+    <img>9788822632593</img>
+  </book>
+  <book isbn="9788834920787">
+    <titolo>L'estate in cui Hikaru è morto 1</titolo>
+    <autore>
+      <nome>Mokumoku</nome>
+      <cognome>Ren</cognome>
+    </autore>
+    <lunghezza>192</lunghezza>
+    <data>2023-06-27</data>
+    <img>9788834920787</img>
+  </book>
+  <book isbn="9788834920992">
+    <titolo>Tokyo Revengers 28</titolo>
+    <autore>
+      <nome>Ken</nome>
+      <cognome>Wakui</cognome>
+    </autore>
+    <lunghezza>192</lunghezza>
+    <data>2022-06-27</data>
+    <img>9788834920992</img>
+  </book>
+  <book isbn="9788809950528">
+    <titolo>Lo Strano Caso del Dr. Jekyll e Mr. Hide</titolo>
+    <autore>
+      <nome>Robert Luis</nome>
+      <cognome>Stevenson</cognome>
+    </autore>
+    <lunghezza>144</lunghezza>
+    <data>2022-05-01</data>
+    <img>9788809950528</img>
+  </book>
+  <book isbn="9788822632036">
+    <titolo>Demon Slayer 19</titolo>
+    <autore>
+      <nome>Koyoharu</nome>
+      <cognome>Gotouge</cognome>
+    </autore>
+    <lunghezza>192</lunghezza>
+    <data>2022-05-11</data>
+    <img>9788822632036</img>
+  </book>
 </libri>

@@ -38,15 +38,15 @@
         echo "<img src = \"res/IMG_GIF/dark.png\" alt=\"moon.png\" width=\"80%\"/></img></button>";
         echo "</form>";
 
-        if(isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true'){     //isset verifica se loggato è settata
+        if (isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true') {
             echo "<hr/>" . $_SESSION['nome'] . "<br/>";
             echo "<hr/>" . "<a href=\"inserisci_libro.php\">Aggiungi un libro</a>" . "<br/>" . "<br/>";
             echo "<a href=\"recensione.php\">Scrivi una recensione</a>";
-            echo "<br/>" . "<br/>" . "<a href=\"res\PHP\logout.php\">Logout</a>";
-        }
-        else{
+            echo "<br/>" . "<br/>" . "<a href=\"res/PHP/logout.php\">Logout</a>";
+        } else {
             echo "<li><a href=\"login.php\">Login&#x1F464;</a></li>";
         }
+        
     ?>
   </ul>
 

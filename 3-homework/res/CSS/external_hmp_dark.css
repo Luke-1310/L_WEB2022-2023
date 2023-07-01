@@ -43,10 +43,12 @@ h2{
     background-color: grey;
     border-style: solid;
     text-align: center;
+    text-decoration: none;
   }
   
   .menu li {                                
     display: inline-block;                  /*mostra sulla stessa linea gli elementi "li" */
+    text-decoration: none; 
   }
   
   .menu li a {
@@ -57,6 +59,7 @@ h2{
   }
   
   .menu li a:hover {
+    text-decoration: none;
     background-color: #1a1a1a;                /*definisce il tipo di visualizzazione (colore di background) del link quando ci sta il cursore*/                            
   }
 

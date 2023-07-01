@@ -33,12 +33,14 @@ h2{
     margin-top: 40px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
 }
 
 .row {
     display: flex;
+    flex-wrap: wrap; /*Gli elementi all'interno della riga si sposteranno su righe separate */
     flex-direction: column;
     justify-content: center;
     align-items: center;
