@@ -38,63 +38,6 @@
     }
 ?> 
 
-<?php
-
-$recensione = "SELECT* FROM recensione r, libro l, utente u WHERE r.utente_ID = u.id AND r.libro_ID = l.id";
-$ris = mysqli_query($connessione, $recensione);
-
-foreach($ris as $row){
-
-    echo"<div class=\"grid\">";
-        echo"<div class=\"container-1\">";
-            echo"<table>";
-
-                echo "<tr>";             
-                echo"<th> Titolo originale </th>";      
-                echo"<td>" . $row['titolo'] ."</td>";
-                echo"</tr>";
-
-                echo "<tr>";             
-                echo"<th> ISBN-13 </th>";      
-                echo"<td>" . $row['ISBN13'] ."</td>";
-                echo"</tr>";
-
-                echo "<tr>";             
-                echo"<th> Numero di pagine </th>";      
-                echo"<td>" . $row['lunghezza'] ."</td>";
-                echo"</tr>";
-
-                echo "<tr>";             
-                echo"<th> Autore </th>";      
-                echo"<td>" . $row['autore'] ."</td>";
-                echo"</tr>";
-
-                echo "<tr>";             
-                echo"<th> Data di uscita </th>";      
-                echo"<td>" . $row['data_uscita'] ."</td>";
-                echo"</tr>";
-
-                echo "<tr>";             
-                echo"<th> Voto </th>";      
-                echo"<td>" . $row['voto'] ."</td>";
-                echo"</tr>";
-
-            echo"</table>";
-        echo"</div>";
-
-    echo "<div class =\"container-2\">";
-        echo "<p>" . $row['testo']. "<br/>" . "<br/>" . "<strong>" . "Scritta da: " .$row['username']. "</strong>" . "</p>";
-    echo"</div>";
-
-    echo "<div class =\"container-3\">";
-    $img_bin = $row['immagine'];
-    echo '<img src="data:image/jpeg;base64,' . $img_bin . '" alt="Immagine">';
-    echo "</div>";
-echo "</div>";
-echo "<hr/>";
-
-}
-?>
 
 <div class="crediti">
     <p>Responsabili del sito: 
