@@ -1,5 +1,6 @@
 html{
     border-style: solid;
+    border-width: 2px;
 }
 
 body{
@@ -47,7 +48,7 @@ h2{
     background-color: white;
     border-style: solid;
     border-radius: 25px;
-    margin: 20px;
+    margin: 22px;
     text-decoration: none;
   }
 
@@ -64,16 +65,24 @@ h2{
 }
   
 .item p {
-    margin-top: 10px;
     font-family: 'Monaco', monospace;
     font-style: oblique;
     font-size: 20px;
-    color: black;
+    cursor: pointer;
     text-decoration: none;
+    color: black;
+
+    transition: transform 0.3s ease;/*transition: <proprietà> <durata> <funzione-tempo>; */
 } 
 
 .item a{
+    
+    color: black;
     text-decoration: none; /* Rimuove la sottolineatura dei link */
+}
+
+.item p:hover {
+    transform: scale(1.05);
 }
 
 .crediti{

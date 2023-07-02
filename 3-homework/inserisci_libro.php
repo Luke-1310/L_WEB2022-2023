@@ -72,7 +72,12 @@
             <label for="img">Inserisci la copertina</label>
             <div class="information-icon">
                 <span class="icon">i</span>
-                <span class="tooltip">L'immagine da inserire deve essere un .jpg</span>
+                <span class="tooltip">Come inserire un immagine:
+                <ul>
+                <li>L'immagine deve essere di tipo .jpg</li>
+                <li>Per questione di formattazione delle immagini, prendi le copertine dei libri da <a href="https://www.amazon.it/">www.amazon.it</a></li>   
+                </ul>
+                </span>
             </div>
         </div>
         <input type="file" name="img" id="img">

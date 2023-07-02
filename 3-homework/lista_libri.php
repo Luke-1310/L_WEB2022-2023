@@ -67,16 +67,15 @@
                 $pathImg = "res/IMG_USER/";
 
                 //Stampa del libro: titolo + immagine
-                echo "<p>" . $titolo;
-                echo "<a href=\"libri_info.php\">&#x1F50D</a>" . "<br/>" . "<br/>" ."</p>";
+                echo "<p>" . "<a href=\"libri_info.php\">$titolo</a>" ."</p>";
                 echo "<img src='" . $pathImg . $nomeImg . "' alt='Copertina.jpg'>";
 
             echo"</div>";
 
         echo"</div>";
     }
+?>
 
-    ?>
 </div>
 
 <hr/>

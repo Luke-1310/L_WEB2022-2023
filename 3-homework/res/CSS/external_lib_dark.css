@@ -1,28 +1,26 @@
 /* Stile del bordo per l'intero documento HTML */
 html {
     border-style: solid;
-    /*border-color: #000000;
-    border-width: 2px;*/
-  }
+}
   
-  body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-  }
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .titolo {
-    font-family: 'Monaco', monospace;
-    font-style: oblique;
-    list-style: none;
-    background-color: transparent;
-    margin: 5px;
-    text-align: center;
-  }
+.titolo {
+  font-family: 'Monaco', monospace;
+  font-style: oblique;
+  list-style: none;
+  background-color: transparent;
+  margin: 5px;
+  text-align: center;
+}
   
-  h2 {
-    font-family: 'Monaco', monospace;
-    font-style: oblique;
-  }
+h2 {
+  font-family: 'Monaco', monospace;
+  font-style: oblique;
+}
 
 .home {
     position: absolute;
@@ -67,7 +65,7 @@ h3 {
   visibility: hidden;
   background-color: black;
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 5px;
   border-radius: 5px;
   position: absolute;
