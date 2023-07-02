@@ -80,6 +80,7 @@
                 echo "<ul>";
                 echo "<li><strong> Titolo: </strong>" . $titolo . "</li>";
                 echo "<li><strong> Autore: </strong>" . $autoreNome ." ". $autoreCognome . "</li>";
+                echo "<li><strong> ISBN-13: </strong>" . $ISBN . "</li>";
                 echo "<li><strong> Lunghezza: </strong>" . $lunghezza . " pagine" . "</li>";
                 echo "<li><strong> Data di uscita: </strong>" . $data . "</li>";
                 echo "</ul>";
