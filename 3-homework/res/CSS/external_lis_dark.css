@@ -53,6 +53,7 @@ h2 {
   }
 
 .item {
+    font-family: 'Monaco', monospace;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -82,6 +83,19 @@ h2 {
 }
 
 .item p:hover {
+    transform: scale(1.05);
+}
+
+.bottone{
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.bottone:hover {
     transform: scale(1.05);
 }
 

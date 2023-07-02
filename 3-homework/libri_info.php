@@ -43,20 +43,32 @@
 
     //Carico il file XML prendendo come parametro il percorso del file XML voluto
     $xml = simplexml_load_file($xmlFile);
-
-    //Ciclo per ciascun elemento book
-    foreach ($xml->book as $book) {
         
-        echo"<div class = row>";
+    echo"<div class = row>";
             
-            echo"<div class = item>";
+        echo"<div class = item>";
             
-                //Mi prendo il titolo del libro corrente 
+        $title = $_POST['titolo'];
+
+        //Percorso del file XML
+        $xmlFile = "res/XML/libri.xml";
+
+        //Carico il file XML prendendo come parametro il percorso del file XML voluto
+        $xml = simplexml_load_file($xmlFile);
+
+        foreach($xml->book as $book){
+
+            if($book->titolo == $title){
+                
+                //Mi prendo tutte le informazionid del libro  
                 $titolo = (string)$book->titolo;
+                $autoreNome = (string)$book->autore->nome;
+                $autoreCognome = (string)$book->autore->cognome;
+                $lunghezza = (string)$book->lunghezza;
+                $data = (string)$book->data;
 
-                //Ricavo l'ISBN del libro, il quale corrisponde al nome dell'immagine del libro
                 $ISBN = (string)$book->attributes()->isbn;
-
+                
                 //Estensione dell'immagine la quale dovrebbe essere jpg
                 $ext = ".jpg";
 
@@ -67,13 +79,17 @@
                 $pathImg = "res/IMG_USER/";
 
                 //Stampa del libro: titolo + immagine
-                echo "<p>" . $titolo . "<br/>" . "<br/>" ."</p>" ;
+                
+                echo $titolo;
+                echo $autoreNome;
                 echo "<img src='" . $pathImg . $nomeImg . "' alt='Copertina.jpg'>";
+            }
 
-            echo"</div>";
+        }
 
         echo"</div>";
-    }
+
+    echo"</div>";
 
     ?>
 </div>

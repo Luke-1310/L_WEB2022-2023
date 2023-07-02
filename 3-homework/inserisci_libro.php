@@ -98,7 +98,6 @@
         <input type="file" name="img" id="img">
 
         <span class ="bottone"><input type="submit" value="Invia"></span>
-        
     </form>
 </div>
         
