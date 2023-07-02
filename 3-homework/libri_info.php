@@ -34,7 +34,7 @@
     }
 ?> 
 
-<div class="container">
+<div class="grid">
 
 <?php
     
@@ -43,53 +43,55 @@
 
     //Carico il file XML prendendo come parametro il percorso del file XML voluto
     $xml = simplexml_load_file($xmlFile);
-        
-    echo"<div class = row>";
             
-        echo"<div class = item>";
+    $title = $_POST['titolo'];
+
+    //Percorso del file XML
+    $xmlFile = "res/XML/libri.xml";
+
+    //Carico il file XML prendendo come parametro il percorso del file XML voluto
+    $xml = simplexml_load_file($xmlFile);
+
+    foreach($xml->book as $book){
+
+        if($book->titolo == $title){
             
-        $title = $_POST['titolo'];
+            //Mi prendo tutte le informazionid del libro  
+            $titolo = (string)$book->titolo;
+            $autoreNome = (string)$book->autore->nome;
+            $autoreCognome = (string)$book->autore->cognome;
+            $lunghezza = (string)$book->lunghezza;
+            $data = (string)$book->data;
 
-        //Percorso del file XML
-        $xmlFile = "res/XML/libri.xml";
+            $ISBN = (string)$book->attributes()->isbn;
+            
+            //Estensione dell'immagine la quale dovrebbe essere jpg
+            $ext = ".jpg";
 
-        //Carico il file XML prendendo come parametro il percorso del file XML voluto
-        $xml = simplexml_load_file($xmlFile);
+            //Compongo il nome completo dell'immagine da stampare
+            $nomeImg = $ISBN . $ext;
 
-        foreach($xml->book as $book){
+            //Percorso dell'immagine
+            $pathImg = "res/IMG_USER/";
 
-            if($book->titolo == $title){
+            //Stampa del libro
+            echo "<div class=\"info-left\">";
                 
-                //Mi prendo tutte le informazionid del libro  
-                $titolo = (string)$book->titolo;
-                $autoreNome = (string)$book->autore->nome;
-                $autoreCognome = (string)$book->autore->cognome;
-                $lunghezza = (string)$book->lunghezza;
-                $data = (string)$book->data;
+                echo "<ul>";
+                echo "<li><strong> Titolo: </strong>" . $titolo . "</li>";
+                echo "<li><strong> Autore: </strong>" . $autoreNome ." ". $autoreCognome . "</li>";
+                echo "<li><strong> Lunghezza: </strong>" . $lunghezza . " pagine" . "</li>";
+                echo "<li><strong> Data di uscita: </strong>" . $data . "</li>";
+                echo "</ul>";
 
-                $ISBN = (string)$book->attributes()->isbn;
-                
-                //Estensione dell'immagine la quale dovrebbe essere jpg
-                $ext = ".jpg";
+            echo "</div>";
 
-                //Compongo il nome completo dell'immagine da stampare
-                $nomeImg = $ISBN . $ext;
-
-                //Percorso dell'immagine
-                $pathImg = "res/IMG_USER/";
-
-                //Stampa del libro: titolo + immagine
-                
-                echo $titolo;
-                echo $autoreNome;
+            echo "<div class=\"info-right\">";
                 echo "<img src='" . $pathImg . $nomeImg . "' alt='Copertina.jpg'>";
-            }
-
+            echo "</div>";
         }
 
-        echo"</div>";
-
-    echo"</div>";
+    }
 
     ?>
 </div>
