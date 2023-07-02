@@ -12,19 +12,34 @@ $surname = $_POST['cognome'];
 
 //come prima cosa mi voglio ricavare il valore che andrà nel campo img del file XML
 
-$dirDestinazione = "../IMG_USER/"; //Assegna la locazione di destinazione delle immagini
-$nuovoNomeImg = $ISBN; //Assegna il nuovo nome dell'immagine il quale corrisponde all'ISBN, mi sembra un buon criterio 
+//controllo se l'estensione del file è di tipo .jpg
+$dirDestinazione = "../IMG_USER/"; //Assegna la cartella di destinazione delle immagini
+$targetFile = $dirDestinazione . basename($_FILES["img"]["name"]);
 
-//$_FILES["img"]["name"] contiene il nome originale del file caricato dall'utente tramite il campo di input con name="img"
-$ext = pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION); //Ricava l'estensione del file originale, 
-$targetFile = $dirDestinazione . $nuovoNomeImg . "." . $ext; //Percorso completo con il nuovo nome
+// Verifica l'estensione del file per consentire solo immagini JPG
+$imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+$allowedExtensions = array("jpg");
 
-//Sposta il file nella directory di destinazione con il nuovo nome
-move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile);
+if (in_array($imageFileType, $allowedExtensions)) {
+    
+    $nuovoNomeImg = $ISBN; //Assegna il nuovo nome dell'immagine il quale corrisponde all'ISBN, mi sembra un buon criterio 
 
-//Mi prendo il nome dell'immagine e la metto in una nuova variabile per chiarire meglio il codice
+    //$_FILES["img"]["name"] contiene il nome originale del file caricato dall'utente tramite il campo di input con name="img"
+    $ext = pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION); //Ricava l'estensione del file originale, 
+    $targetFile = $dirDestinazione . $nuovoNomeImg . "." . $ext; //Percorso completo con il nuovo nome
 
-$image = $nuovoNomeImg;
+    //Sposta il file nella directory di destinazione con il nuovo nome
+    move_uploaded_file($_FILES["img"]["tmp_name"], $targetFile);
+
+    //Mi prendo il nome dell'immagine e la metto in una nuova variabile per chiarire meglio il codice
+    $image = $nuovoNomeImg;  
+} 
+  
+else {
+    $_SESSION['errore_typeFile'] = true;
+    header('Location: ../../inserisci_libro.php');
+    exit();     //buon accorgimento per evitare che il resto del codice venga eseguito
+}
 
 // Il punto (.) prima dell'uguale (=) indica che stiamo concatenando il valore alla variabile anziché sostituire completamente il valore presente in esso.
 // La funzione trim() viene utilizzata per rimuovere eventuali spazi bianchi iniziali o finali dal contenuto di ogni riga del file XML prima di concatenarlo alla variabile $xmlstring.

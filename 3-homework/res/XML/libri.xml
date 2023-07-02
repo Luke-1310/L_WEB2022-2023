@@ -100,4 +100,14 @@
     <data>2022-05-11</data>
     <img>9788822632036</img>
   </book>
+  <book isbn="9781634429405">
+    <titolo>Heavenly Delusion 1</titolo>
+    <autore>
+      <nome>Masakazu</nome>
+      <cognome>Ishiguro</cognome>
+    </autore>
+    <lunghezza>222</lunghezza>
+    <data>2020-01-13</data>
+    <img>9781634429405</img>
+  </book>
 </libri>

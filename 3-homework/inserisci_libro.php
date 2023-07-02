@@ -44,6 +44,11 @@
                 echo "<h3>TITOLO GIA' INSERITO!</h3>";
             unset($_SESSION['errore_t']);//la unsetto altrimenti rimarrebbe la scritta
         }
+
+        if(isset($_SESSION['errore_typeFile']) && $_SESSION['errore_typeFile'] == 'true'){//isset verifica se errore è settata
+            echo "<h3>FORMATO IMMAGINE NON CORRETTO! LEGGI LE NOTE INFORMATIVE!</h3>";
+        unset($_SESSION['errore_typeFile']);//la unsetto altrimenti rimarrebbe la scritta
+    }
     ?>
 
 <div class="container">
