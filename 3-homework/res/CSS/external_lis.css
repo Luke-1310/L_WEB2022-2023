@@ -75,14 +75,16 @@ h2{
     transition: transform 0.3s ease;/*transition: <proprietà> <durata> <funzione-tempo>; */
 } 
 
-.item a{
+.bottone input[type="submit"] {
     
+    font-family: 'Monaco', monospace;
+    font-style: oblique;
     color: black;
-    text-decoration: none; /* Rimuove la sottolineatura dei link */
-}
-
-.item p:hover {
-    transform: scale(1.05);
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .crediti{
