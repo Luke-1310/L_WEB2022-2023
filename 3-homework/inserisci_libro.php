@@ -66,6 +66,7 @@
                 </span>
             </div>
         </div>
+
         <input type="text" name="titolo" id="titolo" placeholder="I Promessi Sposi" required>
 
         <label for="ISBN">ISBN 13 Cifre</label>
@@ -98,6 +99,7 @@
         <input type="file" name="img" id="img">
 
         <span class ="bottone"><input type="submit" value="Invia"></span>
+        
     </form>
 </div>
         
