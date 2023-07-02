@@ -39,10 +39,12 @@
         echo "</form>";
 
         if (isset($_SESSION['loggato']) && $_SESSION['loggato'] === 'true') {
-            echo "<hr/>" . $_SESSION['nome'] . "<br/>";
-            echo "<hr/>" . "<a href=\"inserisci_libro.php\">Aggiungi un libro</a>" . "<br/>" . "<br/>";
-            echo "<a href=\"recensione.php\">Scrivi una recensione</a>";
-            echo "<br/>" . "<br/>" . "<a href=\"res/PHP/logout.php\">Logout</a>";
+            echo "<hr/>". "<strong>" . $_SESSION['nome']. "&#x1F464;" . "</strong>". "<br/>";
+
+            echo "<hr/>" . "<li><a href=\"inserisci_libro.php\">Aggiungi un libro</a></li>";
+            echo "<li><a href=\"recensione.php\">Scrivi una recensione</a></li>";
+            echo "<li><a href=\"res/PHP/logout.php\">Logout</a></li>";
+
         } else {
             echo "<li><a href=\"login.php\">Login&#x1F464;</a></li>";
         }
