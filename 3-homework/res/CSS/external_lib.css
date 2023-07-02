@@ -36,6 +36,16 @@ h3 {
     color: #ff0000;
 }
 
+.info-img{
+    display:flex;
+    flex-direction: row;
+}
+
+.info-title{
+    display:flex;
+    flex-direction: row;
+  }
+
 .container{
     display: flex;
     justify-content: center;

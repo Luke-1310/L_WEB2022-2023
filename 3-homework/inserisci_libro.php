@@ -55,7 +55,17 @@
 
     <form action = "res/PHP/inserisci_libro.php" method="POST" enctype="multipart/form-data">
 
-        <label for="titolo">Titolo</label>
+        <div class = "info-title">
+            <label for="titolo">Titolo</label>
+            <div class="information-icon">
+                <span class="icon">i</span>
+                <span class="tooltip">Come inserire un titolo per i manga:
+                <ul>
+                <li>Inserire anche il numero del volume nel titolo, ad esempio "One Piece 1" per indicare il primo volume</li>  
+                </ul>
+                </span>
+            </div>
+        </div>
         <input type="text" name="titolo" id="titolo" placeholder="I Promessi Sposi" required>
 
         <label for="ISBN">ISBN 13 Cifre</label>
