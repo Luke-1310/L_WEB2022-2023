@@ -44,6 +44,11 @@
     <lunghezza>211</lunghezza>
     <data>2018-06-14</data>
     <img>9788868364601</img>
+    <recensione>
+      <utente>AleColuz</utente>
+      <rec>Semplicemente il libro che mi ha ravvicinato al mondo della lettura. Questo libro racconta la storia di Kevin, il quale per il suo quindicesimo compleanno riceve in regalo una macchinetta fotografica, fino a qui tutto normale no? Beh, ecco, peccato che quella macchinetta in realtà invece di fotografare il soggetto che si vuole immortalare fotografa un cane a dir poco spaventoso che foto dopo foto si avvicina sempre di più e sembra quasi uscire dalla fotografia! Quindi come puoi immaginare è a dir poco spaventoso, da leggere rigorosamente dopo le quattro di notte come da titolo della collana di cui ne fa parte!</rec>
+      <rating>4</rating>
+    </recensione>
   </book>
   <book isbn="9788807900792">
     <titolo>I fratelli Karamazov</titolo>
@@ -84,6 +89,11 @@
     <lunghezza>192</lunghezza>
     <data>2022-06-27</data>
     <img>9788834920992</img>
+    <recensione>
+      <utente>prova</utente>
+      <rec>Bello dai, ma neanche troppo!</rec>
+      <rating>2.5</rating>
+    </recensione>
   </book>
   <book isbn="9788809950528">
     <titolo>Lo Strano Caso del Dr. Jekyll e Mr. Hide</titolo>
@@ -114,5 +124,25 @@
     <lunghezza>222</lunghezza>
     <data>2020-01-13</data>
     <img>9781634429405</img>
+  </book>
+  <book isbn="9788846733733">
+    <titolo>La Storia di Elsa Morante</titolo>
+    <autore>
+      <nome>Elsa</nome>
+      <cognome>Morante</cognome>
+    </autore>
+    <lunghezza>252</lunghezza>
+    <data>2012-09-01</data>
+    <img>9788846733733</img>
+  </book>
+  <book isbn="9788836806959">
+    <titolo>I versi del capitano</titolo>
+    <autore>
+      <nome>Pablo</nome>
+      <cognome>Neruda</cognome>
+    </autore>
+    <lunghezza>203</lunghezza>
+    <data>2001-09-28</data>
+    <img>9788836806959</img>
   </book>
 </libri>
