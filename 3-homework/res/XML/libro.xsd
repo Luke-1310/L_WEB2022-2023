@@ -50,6 +50,6 @@
 
   <xsd:element name="utente" type="xsd:string" />
   <xsd:element name="rec" type="xsd:string" />
-  <xsd:element name="rating" type="xsd:integer"/>
+  <xsd:element name="rating" type="xsd:decimal"/>
 
 </xsd:schema>

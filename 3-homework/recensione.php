@@ -58,7 +58,7 @@
         <textarea name="testo" id="testo" required></textarea>
 
         <label for="voto">Inserisci il voto</label>
-        <input type="number" step="0.5" min="0" max="10" name="voto" id="voto" required>
+        <input type="number" step="0.5" min="1" max="5" name="voto" id="voto" required>
 
         <span class ="bottone"><input type="submit" value="Invia">
         </span>
