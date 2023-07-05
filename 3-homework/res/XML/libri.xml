@@ -10,9 +10,9 @@
     <data>2020-05-06</data>
     <img>9788418271236</img>
     <recensione>
-      <utente>true</utente>
-      <rec>wdwdwd</rec>
-      <rating>2.5</rating>
+      <utente>prova</utente>
+      <rec>carino</rec>
+      <rating>3.5</rating>
     </recensione>
   </book>
   <book isbn="9788828720232">
@@ -34,16 +34,6 @@
     <lunghezza>62</lunghezza>
     <data>1994-05-03</data>
     <img>9783455000955</img>
-    <recensione>
-      <utente>true</utente>
-      <rec>prova</rec>
-      <rating>4</rating>
-    </recensione>
-    <recensione>
-      <utente>true</utente>
-      <rec>bello</rec>
-      <rating>1</rating>
-    </recensione>
   </book>
   <book isbn="9788868364601">
     <titolo>Il fotocane</titolo>

@@ -48,7 +48,7 @@ if ($libri_corrispondenti->length > 0) {
     $libro = $libri_corrispondenti->item(0);
     $recensione = $documento->createElement('recensione');
 
-    $utente = $documento->createElement('utente', $_SESSION['loggato']);
+    $utente = $documento->createElement('utente', $_SESSION['nome']);
     $recensione->appendChild($utente);
 
     $rec = $documento->createElement('rec', $review); // Corretto il nome della variabile

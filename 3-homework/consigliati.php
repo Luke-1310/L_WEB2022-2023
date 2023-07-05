@@ -36,8 +36,97 @@
         echo "<a href = \"homepage.php\"><img src = \"res/IMG_GIF/home.png\" alt=\"home.png\" width=\"10%\"/></a>";
         echo "</div>";
     }
-?> 
 
+    $xmlFile = "res/XML/libri.xml";
+
+    $xml = simplexml_load_file($xmlFile);
+
+    foreach($xml->book as $book){
+
+        foreach($book->recensione as $recensione) {
+            
+            //Queste sono le informazioni della recensione
+            $utente = $recensione->utente;
+            $testoRecensione = $recensione->rec;
+            $rating = $recensione->rating;
+            
+            //Queste sono le informazione del libro
+            $titolo = $book->titolo;
+            $nome = $book->autore->nome;
+            $cognome = $book->autore->cognome;
+            $pagine = $book->lunghezza;
+            $data = $book->data;
+
+            //Questo è l'attributo ISBN di book
+            $ISBN = (string)$book->attributes()->isbn;
+
+            //Estensione della copertina del libro
+            $estensione = ".jpg";
+
+            //Ricavo il nome della copertina corrispondente
+            $nomeImmagine = $ISBN . $estensione;
+
+            //Metto il percorso della cartella contenente le immagini
+            $percorso = "res/IMG_USER/";
+
+            //Procedo alla stampa della recensione corrente
+            echo"<div class=\"grid\">";
+                echo"<div class=\"container-1\">";
+                    echo"<table>";
+                    echo "<tr>";             
+                    echo"<th> Titolo originale </th>";      
+                    echo"<td>" . $titolo ."</td>";
+                    echo"</tr>";
+    
+                    echo "<tr>";             
+                    echo"<th> ISBN-13 </th>";      
+                    echo"<td>" . $ISBN ."</td>";
+                    echo"</tr>";
+    
+                    echo "<tr>";             
+                    echo"<th> Numero di pagine </th>";      
+                    echo"<td>" . $pagine ."</td>";
+                    echo"</tr>";
+    
+                    echo "<tr>";             
+                    echo"<th> Nome autore </th>";      
+                    echo"<td>" . $nome ."</td>";
+                    echo"</tr>";
+
+                    echo "<tr>";             
+                    echo"<th> Cognome autore </th>";      
+                    echo"<td>" . $cognome ."</td>";
+                    echo"</tr>";
+
+                    echo "<tr>";             
+                    echo"<th> Data di uscita </th>";      
+                    echo"<td>" . $data ."</td>";
+                    echo"</tr>";
+    
+                    echo "<tr>";             
+                    echo"<th> Voto </th>";      
+                    echo"<td>" . $rating ."</td>";
+                    echo"</tr>";
+    
+                echo"</table>";
+            echo"</div>";
+    
+        echo "<div class =\"container-2\">";
+            echo "<p>" . $testoRecensione . "<br/>" . "<br/>" . "<strong>" . "Scritta da: " . $utente . "</strong>" . "</p>";
+        echo"</div>";
+    
+        echo "<div class =\"container-3\">";
+            echo "<img src ='" . $percorso . $nomeImmagine . "' alt= 'Copertina.jpg'>";
+        echo "</div>";
+        
+    echo "</div>";
+
+    echo "<hr/>";
+
+        }  
+    }
+
+?> 
 
 <div class="crediti">
     <p>Responsabili del sito: 
