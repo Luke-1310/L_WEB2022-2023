@@ -10,9 +10,11 @@ Luca Privitera - https://github.com/Luke-1310/L_WEB2022-2023
 
 Descrizione:
 
-L'esercizio di base è quello consegnato nel 1° homework ma con i dovuti aggiornamenti richiesti dalla traccia. 
+L'esercizio è stato eseguito utilizzando DOM, il quale presenta diverse pagine in php tra cui un file chiamato "install.php" per far si che si possa creare il database nel caso in cui non fosse già presente con solamente la tabella utenti.
+Il restante dei dati è stato manipolato tramite file XML con relativo schema.
 
-Questo presenta diverse pagine in php tra cui un file chiamato "install.php" per far si che si possa creare il database nel caso in cui non fosse già presente.
+Per controllare la grammatica possiamo trovare anche un validatore nel file validator.php.
+
 È presente anche un file chiamato "connection.php" il quale viene richiamato ogni volta che bisogna connettersi al db per compiere delle operazioni.
 
 Principali feature:
@@ -21,9 +23,9 @@ La possibilità di scegliere tra due temi per la visualizzazione del sito, reali
 
 Sistema di registrazione e login per gli utenti con password criptate (hashing).
 
-Funzione che permette agli utenti di inserire nuovi libri al db con tanto di copertina (campo BLOB).
+Funzione che permette agli utenti di inserire nuovi libri nel sito con copertina.
 
-Possibilità per gli utenti di effettuare recensioni dei libri presenti nel db.
+Possibilità per gli utenti di effettuare recensioni dei libri presenti.
 
 
 I file sono stati distributi nel seguente modo:
@@ -37,8 +39,7 @@ Entrando poi nella cartella "res" troviamo:
 IMG_GIF (contiene le immagini utilizzate nel sito + le copertine di alcuni per poter effettuare i vari test)*
 CSS (contiene i file CSS utilizzati)
 PHP (contiene i file PHP)
-
-*per effettuare le prove è necessario utilizzare il form del sito e NON inserire le immagini tramite INSERT su phpmyadmin poiché esse non verrano poi visualizzate correttamente
+XML (contiene i file XML con relativo schema)
 
 
 🐈
