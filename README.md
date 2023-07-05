@@ -5,4 +5,6 @@ In questa repository possiamo trovare una buona parte degli esercizi da me effet
 
 "2-homework" contiene il secondo homework da consegnare XHTML-CSS-PHP-MYSQL
 
-"Tesina" cartella che conterrà poi il lavoro per la futura tesina
+"3-homework" contiene il terzo homework da consegnare XHTML-CSS-PHP-XML
+
+"Tesina" cartella contiene il lavoro per la  tesina
